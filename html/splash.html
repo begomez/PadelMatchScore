@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,user-scalable=no">
+
+  		<meta http-equiv="refresh" content="3; url=index.html">
+
+		<title id="mainTitle">PadelScore</title>
+		
+		<link rel="stylesheet" href="../lib/tau/wearable/theme/default/tau.min.css">
+		
+		<link rel="stylesheet" media="all and (-tizen-geometric-shape: circle)" href="../lib/tau/wearable/theme/default/tau.circle.min.css">
+		
+		<link rel="stylesheet" href="../css/common.css">
+		<link rel="stylesheet" href="../css/splash.css">
+		
+	</head>
+	
+	<body onload="javascript:initPage();">
+		<div class="ui-page ui-page-active grad" id="main">
+			<div class="ui-content content-padding">
+				<div id="splash_container">
+					<img id="splash_img" src="../images/tennis_ball_with_shadow.png">
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="lib/tau/wearable/js/tau.min.js"></script>
+
+		<script src="../js/tizen_battery.js"></script>
+
+		<script src="../js/circle-helper.js"></script>
+
+		<script src="../js/tizen_events.js"></script>
+
+		<script src="../js/utils_logger.js"></script>
+
+		<script src="../js/utils_common.js"></script>
+
+		<script src="../js/padel_storage.js"></script>
+
+		<script src="../js/padel_database.js"></script>
+
+		<script src="../js/presenter_splash.js"></script>
+
+		<script>
+
+			function initPage() {
+				initComponents();
+			}
+
+		</script>	
+
+	</body>
+</html>

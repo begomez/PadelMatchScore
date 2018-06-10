@@ -1,0 +1,23 @@
+* {
+    font-family: Verdana, Lucida Sans, Arial, Helvetica, sans-serif;
+}
+
+#splash_container {
+	height: 100%;
+	padding: 20%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#splash_title {
+}
+
+#splash_img {
+	display: block;
+	width: 30%;
+	margin: 0 auto;
+}
+
+
+
+

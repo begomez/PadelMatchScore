@@ -1,0 +1,30 @@
+.ui-li-thumb-left {
+   border-radius: 50%;
+}
+
+.ui-listview li.li-has-thumb-left .img-icon {
+   left: 30px;
+}
+
+.ui-listview li .img-icon {
+   position: absolute;
+   top: 50%;
+   width: 86px;
+   height: 86px;
+   margin: 0;
+   padding: 0;
+   -webkit-transform: translate3d(0, -50%, 0);
+   background-color: rgba(0, 0, 0, 1);
+}
+
+.ui-listview li .img-icon:before {
+   position: absolute;
+   content: "";
+   top: 25%;
+   left: 25%;
+   width: 50%;
+   height: 50%;
+   -webkit-mask-size: 100% 100%;
+   background-color: rgb(255, 255, 255);/* change color to tint images */
+   -webkit-mask-repeat: no-repeat;
+}

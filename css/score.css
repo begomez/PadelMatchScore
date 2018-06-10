@@ -1,0 +1,121 @@
+:root {
+    --full_width: 100%;
+    --full_height: 100%;
+
+    --table_width: 80%;
+    --partial_height: 80%;
+    
+    --layer_score_height: 40%;
+    --layer_separator_height: 20%; 
+}
+
+@font-face {
+  font-family: myFont;
+  src: url(../fonts/digital-7.ttf);
+}
+
+.container {
+  font-size: larger;
+  text-align: center;
+}
+
+html {
+  height: var(--full_height);
+}
+
+body {
+  height: var(--full_height);
+  font-family: myFont;
+}
+
+div#main {
+  height: 100%;
+  padding: 1%;
+}
+
+div#local {
+  margin: 0 auto;
+  width: var(--full_width);
+  height: var(--layer_score_height);
+}
+
+div#separator {
+  margin: 0 auto; 
+  color: #FFF;  
+  height: var(--layer_separator_height);
+}
+
+div#visitor {
+  margin: 0 auto;
+  height: var(--layer_score_height);
+
+}
+  
+table {
+  width: var(--table_width);
+  margin: 0 auto;
+  table-layout: fixed;
+}
+
+table#contentLocal {
+  height: var(--full_height);
+}
+
+table#titles {
+  height: var(--full_height);
+}
+
+table#contentVisitor {
+  height: var(--full_height);
+}
+
+td {
+  border: #c6c6c6 10px solid;
+  background: black;
+
+  height: var(--full_height);
+  margin: 0 auto;
+
+  text-align: center;
+  vertical-align: middle;
+  
+  overflow: hidden;
+}
+
+td.separator {
+  font-size: small;
+  color: white;
+}
+
+td.first {
+  width: 55%;
+  color: red;
+}
+
+td.second {
+  width: 15%;
+  color: white;
+}
+
+td.third {
+  width: 15%;
+  color: white;
+}
+
+td.fourth {
+  width: 15%;
+  color: white;
+}
+
+h3 {
+   color: white;
+}
+
+h1.spanned {
+  display: inline;
+  margin: 0 auto;
+}
+
+.content_text {
+}
+    

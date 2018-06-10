@@ -1,0 +1,31 @@
+:root {
+    --item_pad_left: 120px;
+}
+
+* {
+    font-family: Verdana, Lucida Sans, Arial, Helvetica, sans-serif;
+}
+
+.play-icon:before
+{
+   -webkit-mask-image: url(../images/ico_play.png); 
+}
+
+.finish-icon:before
+{
+   -webkit-mask-image: url(../images/ico_sneakers.png); 
+}
+
+.discard-icon:before
+{
+   -webkit-mask-image: url(../images/ico_discard.png); 
+}
+
+.history-icon:before
+{
+   -webkit-mask-image: url(../images/ico_court.png); 
+}
+
+span {
+	padding-left: var(--item_pad_left);
+}

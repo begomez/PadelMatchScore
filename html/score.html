@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,user-scalable=no">
+
+
+
+		<title id="mainTitle">PadelScore</title>
+		
+		<link rel="stylesheet" href="../lib/tau/wearable/theme/default/tau.min.css">
+
+		<link rel="stylesheet" media="all and (-tizen-geometric-shape: circle)" href="../lib/tau/wearable/theme/default/tau.circle.min.css">
+
+		<link rel="stylesheet" href="../css/common.css">
+	    <link rel="stylesheet" href="../css/score.css">
+	</head>
+
+	<body onload="javascript:initPage();">
+
+		<div class="ui-page ui-page-active grad" id="main" >
+		
+        	<div id="local" class="container" onmouseover="javascript:onLocalSelected(this);">
+
+				<table id="contentLocal">
+
+					<tr >
+					  <td class="first">
+					    <h1 id="localPoints" class="spanned">
+					    	0
+						</h1>
+					  </td>
+					  <td class="second">
+					    <h1 id="localSet1"  class="spanned">
+					    	0
+					    </h1>
+					  </td>
+					  <td class="third">
+					    <h1 id="localSet2"  class="spanned">
+					    	0
+					    </h1>
+					  </td>
+					  <td class="fourth"  >
+					    <h1 id="localSet3" class="spanned">
+					    	0
+						</h1>
+					  </td>
+					</tr>
+
+				</table>
+
+          	</div>
+
+          	<div id="separator">
+
+				<table id="titles">
+
+					<tr>
+					  <td class="first" >
+					    <h3 id="itemGame">Game</h3>
+					  </td>
+					  <td class="second">
+					    <h3 id="itemSetFirst">Set1</h3>
+					  </td>
+					  <td class="third">
+					    <h3 id="itemSetSecond">Set2</h3>
+					  </td>
+					  <td class="fourth">
+					    <h3 id="itemSetThird">Set3</h3>
+					  </td>
+					</tr>
+
+				</table>
+
+	        </div>
+
+            <div id="visitor" class="container" onmouseover="javascript:onVisitorSelected(this);">
+
+            	<table id="contentVisitor">
+
+	                <tr>
+	                  <td class="first" >
+	                    <h1 id="visitorPoints" class="spanned">
+	                    	0
+	                    </h1>
+	                  </td>
+	                  <td class="second">
+	                    <h1 id="visitorSet1"  class="spanned">
+	                    	0
+	                    </h1>
+	                  </td>
+	                  <td class="third">
+	                    <h1 id="visitorSet2"  class="spanned">
+	                    	0
+	                    </h1>
+	                  </td>
+	                  <td class="fourth">
+	                    <h1 id="visitorSet3"  class="spanned">
+	                    	0
+	                    </h1>
+	                  </td>
+	                </tr>
+              </table>
+
+			</div>
+
+		</div>
+
+	  	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	      
+	  	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+		<script type="text/javascript" src="lib/tau/wearable/js/tau.min.js"></script>
+
+		<script src="../js/tizen_battery.js"></script>
+		
+		<script src="../js/circle-helper.js"></script>
+		
+		<script src="../js/tizen_events.js"></script>
+				
+		<script src="../js/lib_swipe.js"></script>	
+
+		<script src="../js/utils_logger.js"></script>
+
+	  	<script src="../js/utils_common.js"></script>
+
+	  	<script src="../js/utils_html.js"></script>
+
+	  	<script src="../js/padel_database.js"></script>
+
+	  	<script src="../js/padel_storage.js"></script>
+
+		<script src="../js/padel_core.js"></script>	
+
+		<script src="../language.js"></script>	
+
+		<script src="../js/presenter_score.js"></script>	
+
+		<script>
+
+  			function initPage() {
+				setTexts();
+
+				initComponents();
+
+				prepareRepository();
+
+				if (isContinueMatch()) {
+					restoreMatch();
+
+				} else {
+					createMatch();	
+				}
+ 			}
+
+	  	</script> 
+
+	</body>
+
+</html>

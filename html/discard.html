@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,user-scalable=no">
+
+
+
+		<title id="mainTitle">PadelScore</title>
+
+		<link rel="stylesheet" href="../lib/tau/wearable/theme/default/tau.min.css">
+
+		<link rel="stylesheet" media="all and (-tizen-geometric-shape: circle)" href="../lib/tau/wearable/theme/default/tau.circle.min.css">
+		
+		<link rel="stylesheet" href="../css/common.css">
+		<link rel="stylesheet" href="../css/common_anim.css">
+		<link rel="stylesheet" href="../css/finish.css">
+		
+	</head>
+
+	<body onload="javascript:initPage();">
+		<div class="ui-page ui-page-active grad" id="main">
+			<header class="ui-header">
+				<h2 class="ui-title">PadelScore</h2>
+			</header>
+
+			<div class="ui-content content-padding">
+
+				<p id="current"></p>	
+
+				<div id="loaderContainer" class="centered">
+
+					<img id="loaderIcon" class="ball_animated" src="../images/yellow_ball.png" />
+
+				</div>
+
+			</div>
+			
+			<footer class="ui-footer ui-bottom-button">
+				<a id="btnAction" class="ui-btn" onclick="discardGameFromStorage();">Discard</a>
+			</footer>
+		</div>
+
+		<script type="text/javascript" src="lib/tau/wearable/js/tau.min.js"></script>
+
+		<script src="../js/tizen_battery.js"></script>
+
+		<script src="../js/circle-helper.js"></script>
+
+		<script src="../js/tizen_events.js"></script>
+
+		<script src="../js/utils_logger.js"></script>
+
+	  	<script src="../js/utils_common.js"></script>
+
+		<script src="../js/utils_html.js"></script>
+
+		<script src="../js/utils_anim.js"></script>
+
+		<script src="../js/padel_storage.js"></script>
+
+		<script src="../language.js"></script>
+
+		<script src="../js/presenter_operation.js"></script>
+	
+		<script src="../js/presenter_discard.js"></script>
+
+		<script>
+
+			function initPage() {
+				setTexts();
+
+				fetchLastMatch();
+			}
+
+		</script>
+
+	</body>
+</html>

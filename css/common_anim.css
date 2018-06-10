@@ -1,0 +1,29 @@
+:root {
+    --anim_duration: 5s;
+}
+
+.ball_animated {
+  width: 50%;
+  height: 50%;
+  animation: rolling var(--anim_duration) alternate infinite;
+  webkit-animation: rolling var(--anim_duration) alternate infinite;
+  -webkit-animation-play-state:paused;
+  animation-play-state:paused;
+}
+
+.centered {
+   display: block;
+   visibility: hidden;
+   position: absolute;
+   top: 50%;
+   left: 40%;
+   width: 20%;
+}
+
+@keyframes rolling {
+  0% {transform: translateX(0) rotate(0turn);}
+  20% {transform: translateX(10vw) rotate(.5turn);}
+  40% {transform: translateX(0) rotate(-.2turn);}
+  70% {transform: translateX(15vw) rotate(2.5turn);} 
+  100% {transform: translateX(0) rotate(-1.0turn);} 
+}
