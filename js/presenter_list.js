@@ -9,7 +9,9 @@ var ID_EMPTY = "empty";
 var TARGET = "matchesList";
 
 function setTexts() {
-	
+	window.document.getElementById(ID_TITLE).innerHTML = LANG_JSON_DATA["app_name"];
+	window.document.getElementById(ID_SUBTITLE).innerHTML = LANG_JSON_DATA["app_name"];
+	window.document.getElementById(ID_EMPTY).innerHTML = LANG_JSON_DATA["error_no_data"];
 }
 
 function hideEmptyList() {
