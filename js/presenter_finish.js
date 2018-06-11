@@ -14,7 +14,7 @@ var SUCCESS_MSG = LANG_JSON_DATA["finish_success"];
 function setTexts() {
 	window.document.getElementById(ID_TITLE).innerHTML = LANG_JSON_DATA["app_name"];
 	window.document.getElementById(ID_SUBTITLE).innerHTML = LANG_JSON_DATA["app_name"];
-	window.document.getElementById(ID_BTN).innerHTML = LANG_JSON_DATA["action_finish"];
+	window.document.getElementById(ID_BTN).innerHTML = LANG_JSON_DATA["action_save"];
 	window.document.getElementById(ID_CURRENT).innerHTML = LANG_JSON_DATA["str_current"];
 }
 

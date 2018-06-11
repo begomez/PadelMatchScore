@@ -28,7 +28,7 @@ body {
   font-family: myFont;
 }
 
-div#main {
+div#score {
   height: 100%;
   padding: 1%;
 }
