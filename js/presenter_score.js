@@ -39,7 +39,6 @@ function dump() {
 
 function setTexts() {
 	window.document.getElementById(ID_TITLE).innerHTML = LANG_JSON_DATA["app_name"];
-	window.document.getElementById(ID_SUBTITLE).innerHTML = LANG_JSON_DATA["app_name"];
 	window.document.getElementById(ID_GAME).innerHTML = LANG_JSON_DATA["str_game"];
 	window.document.getElementById(ID_SET_FIRST).innerHTML = LANG_JSON_DATA["str_set1"];
 	window.document.getElementById(ID_SET_SECOND).innerHTML = LANG_JSON_DATA["str_set2"];
