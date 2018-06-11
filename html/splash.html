@@ -6,7 +6,7 @@
 
   		<meta http-equiv="refresh" content="3; url=index.html">
 
-		<title id="mainTitle">PadelScore</title>
+		<title id="mainTitle"></title>
 		
 		<link rel="stylesheet" href="../lib/tau/wearable/theme/default/tau.min.css">
 		
@@ -18,7 +18,7 @@
 	</head>
 	
 	<body onload="javascript:initPage();">
-		<div class="ui-page ui-page-active grad" id="main">
+		<div class="ui-page ui-page-active grad" id="splash">
 			<div class="ui-content content-padding">
 				<div id="splash_container">
 					<img id="splash_img" src="../images/tennis_ball_with_shadow.png">
@@ -29,24 +29,30 @@
 		<script src="../lib/tau/wearable/js/tau.min.js"></script>
 
 		<script src="../js/tizen_battery.js"></script>
-
-		<script src="../js/circle-helper.js"></script>
-
+		
 		<script src="../js/tizen_events.js"></script>
+
+		<script src="../js/tizen_circle_helper.js"></script>
 
 		<script src="../js/utils_logger.js"></script>
 
 		<script src="../js/utils_common.js"></script>
 
+		<script src="../js/utils_html.js"></script>
+
 		<script src="../js/padel_storage.js"></script>
 
 		<script src="../js/padel_database.js"></script>
+
+		<script src="../language.js"></script>
 
 		<script src="../js/presenter_splash.js"></script>
 
 		<script>
 
 			function initPage() {
+				setTexts();
+			
 				initComponents();
 			}
 
