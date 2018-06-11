@@ -22,6 +22,7 @@ var match;
 
 // HTML tags
 var ID_TITLE = "mainTitle"; 
+var ID_SUBTITLE = "secondaryTitle"; 
 var ID_GAME = "itemGame";
 var ID_SET_FIRST = "itemSetFirst";
 var ID_SET_SECOND = "itemSetSecond";
@@ -37,7 +38,13 @@ function dump() {
 }
 
 function setTexts() {
-    
+	window.document.getElementById(ID_TITLE).innerHTML = LANG_JSON_DATA["app_name"];
+	window.document.getElementById(ID_SUBTITLE).innerHTML = LANG_JSON_DATA["app_name"];
+	window.document.getElementById(ID_GAME).innerHTML = LANG_JSON_DATA["option_start"];
+	window.document.getElementById(ID_SET_FIRST).innerHTML = LANG_JSON_DATA["option_finish"];
+	window.document.getElementById(ID_SET_SECOND).innerHTML = LANG_JSON_DATA["option_discard"];
+	window.document.getElementById(ID_SET_THIRD).innerHTML = LANG_JSON_DATA["option_history"];
+
 }
 
 function initComponents() {
