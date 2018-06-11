@@ -1,2 +1,6 @@
+*.sign
+*.settings
 .sign/*.*
-.tproject
+.settings/*.*
+*.tproject
+*.wgt
