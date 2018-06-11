@@ -5,7 +5,7 @@
 var VIEW_MSG_ID = "current";
 var VIEW_BTN_ID = "btnAction";
 
-var EMPTY_MSG = "No match";
+var EMPTY_MSG = LANG_JSON_DATA["error_no_match"];
 
 
 function isPlaying() {

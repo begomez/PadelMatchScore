@@ -2,10 +2,4 @@
     font-family: Verdana, Lucida Sans, Arial, Helvetica, sans-serif;
 }
 
-.withBack {
-	background-image: url("../images/back_balls.png");
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
 .no-click {pointer-events: none;}
