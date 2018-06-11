@@ -10,5 +10,10 @@ var ID_ITEM_3 = "item3";
 var ID_ITEM_4 = "item4";
 
 function setTexts() {
-
+	window.document.getElementById(ID_TITLE).innerHTML = LANG_JSON_DATA["app_name"];
+	window.document.getElementById(ID_SUBTITLE).innerHTML = LANG_JSON_DATA["app_name"];
+	window.document.getElementById(ID_ITEM_1).innerHTML = LANG_JSON_DATA["option_start"];
+	window.document.getElementById(ID_ITEM_2).innerHTML = LANG_JSON_DATA["option_finish"];
+	window.document.getElementById(ID_ITEM_3).innerHTML = LANG_JSON_DATA["option_discard"];
+	window.document.getElementById(ID_ITEM_4).innerHTML = LANG_JSON_DATA["option_history"];
 }
