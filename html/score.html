@@ -16,7 +16,7 @@
 	    <link rel="stylesheet" href="../css/score.css">
 	</head>
 
-	<body onload="javascript:initPage();">
+	<body >
 
 		<div class="ui-page ui-page-active grad" id="score" >
 		
@@ -106,10 +106,8 @@
 
 		</div>
 
-	  	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	  	<script src="../js/jquery-3.3.1.min.js"></script>
 	      
-	  	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-
 		<script src="../lib/tau/wearable/js/tau.min.js"></script>
 
 		<script src="../js/tizen_battery.js"></script>
@@ -136,7 +134,11 @@
 
 		<script src="../js/presenter_score.js"></script>	
 
-		<script>
+		<script>	
+
+			document.addEventListener("DOMContentLoaded", function () {initPage();logChange();});
+
+
 
   			function initPage() {
 				setTexts();

@@ -31,9 +31,10 @@ body {
 
 div#score {
   height: 100%;
-  padding-top: 2%;
-  padding-left: 0%;
-  padding-right: 0%;
+  padding-top: 8%;
+  padding-bottom: 8%;
+  padding-left: 8%;
+  padding-right: 8%;
 }
 
 div#local {
@@ -92,22 +93,22 @@ td.separator {
 }
 
 td.first {
-  width: 40%;
+  width: 30%;
   color: red;
 }
 
 td.second {
-  width: 20%;
+  width: 22%;
   color: white;
 }
 
 td.third {
-  width: 20%;
+  width: 22%;
   color: white;
 }
 
 td.fourth {
-  width: 20%;
+  width: 22%;
   color: white;
 }
 
