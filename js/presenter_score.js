@@ -33,17 +33,17 @@ var ID_SET_THIRD = "itemSetThird";
 // INIT
 /////////////////////////////////////////////////////////////////////
 
-function dump() {
-    logMessage(match.toString());
+function setTexts() {
+    window.document.getElementById(ID_TITLE).innerHTML = LANG_JSON_DATA["app_name"];
+    window.document.getElementById(ID_GAME).innerHTML = LANG_JSON_DATA["str_game"];
+    window.document.getElementById(ID_SET_FIRST).innerHTML = LANG_JSON_DATA["str_set1"];
+    window.document.getElementById(ID_SET_SECOND).innerHTML = LANG_JSON_DATA["str_set2"];
+    window.document.getElementById(ID_SET_THIRD).innerHTML = LANG_JSON_DATA["str_set3"];
+
 }
 
-function setTexts() {
-	window.document.getElementById(ID_TITLE).innerHTML = LANG_JSON_DATA["app_name"];
-	window.document.getElementById(ID_GAME).innerHTML = LANG_JSON_DATA["str_game"];
-	window.document.getElementById(ID_SET_FIRST).innerHTML = LANG_JSON_DATA["str_set1"];
-	window.document.getElementById(ID_SET_SECOND).innerHTML = LANG_JSON_DATA["str_set2"];
-	window.document.getElementById(ID_SET_THIRD).innerHTML = LANG_JSON_DATA["str_set3"];
-
+function dump() {
+    logMessage(match.toString());
 }
 
 function initComponents() {

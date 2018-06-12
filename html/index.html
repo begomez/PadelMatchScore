@@ -26,25 +26,25 @@
 			<div class="ui-content content-padding">
 				<ul class="ui-listview">
 		            <li class="li-has-thumb-left">
-		            	<a class="play-icon" href="../html/score.html">
+		            	<a class="play-icon" onclick="navigateTo('score.html');">
     	                	<div class="img-icon play-icon ui-li-thumb-left"></div>
     	                	<span id="item1"></span>
 	                	</a>
 		            </li>
 		            <li class="li-has-thumb-left">
-		            	<a href="../html/finish.html">
+		            	<a onclick="navigateTo('finish.html');">
     	                	<div class="img-icon finish-icon ui-li-thumb-left"></div>
     	                	<span id="item2"></span>
 		            	</a>
 		            </li>
 		            <li class="li-has-thumb-left">
-		            	<a href="../html/discard.html">
+		            	<a onclick="navigateTo('discard.html');">
     	                	<div class="img-icon discard-icon ui-li-thumb-left"></div>
     	                	<span id="item3"></span>
 		            	</a>
 		            </li>
 		            <li class="li-has-thumb-left">
-		            	<a href="../html/list.html">
+		            	<a onclick="navigateTo('list.html');">
     	                	<div class="img-icon history-icon ui-li-thumb-left"></div>
     	                	<span id="item4"></span>
 		            	</a>
@@ -68,6 +68,10 @@
 		<script src="../js/presenter_index.js"></script>
 
 		<script>
+
+			function navigateTo(target) {
+				window.location = target;
+			}
 
 			function initPage() {
 				setTexts();
