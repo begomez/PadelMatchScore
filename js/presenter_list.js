@@ -39,7 +39,7 @@ function createImageItem() {
 function createDateItem(time) {
 	var header = createHTMLSpan();
 
-	addTextToHTMLWidget(header, formatDateInMilis(time))
+	addTextToHTMLWidget(header, formatDateInMilisShort(time))
 
 	return header;
 }

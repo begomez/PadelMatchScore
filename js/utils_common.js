@@ -47,3 +47,7 @@ function stringToArray(str, separator) {
 function formatDateInMilis(milis) {
 	return new Date(milis).toDateString();
 }
+
+function formatDateInMilisShort(milis) {
+	return new Date(milis).toLocaleDateString();
+}

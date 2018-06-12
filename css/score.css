@@ -2,11 +2,11 @@
     --full_width: 100%;
     --full_height: 100%;
 
-    --table_width: 80%;
-    --partial_height: 80%;
+    --table_width: 95%;
+    --partial_height: 100%;
     
     --layer_score_height: 40%;
-    --layer_separator_height: 20%; 
+    --layer_separator_height: 15%; 
 }
 
 @font-face {
@@ -26,11 +26,14 @@ html {
 body {
   height: var(--full_height);
   font-family: myFont;
+  overflow:hidden;
 }
 
 div#score {
   height: 100%;
-  padding: 1%;
+  padding-top: 2%;
+  padding-left: 0%;
+  padding-right: 0%;
 }
 
 div#local {
@@ -40,6 +43,7 @@ div#local {
 }
 
 div#separator {
+  font-size: small;	
   margin: 0 auto; 
   color: #FFF;  
   height: var(--layer_separator_height);
@@ -47,8 +51,8 @@ div#separator {
 
 div#visitor {
   margin: 0 auto;
+  width: var(--full_width);
   height: var(--layer_score_height);
-
 }
   
 table {
@@ -88,22 +92,22 @@ td.separator {
 }
 
 td.first {
-  width: 55%;
+  width: 40%;
   color: red;
 }
 
 td.second {
-  width: 15%;
+  width: 20%;
   color: white;
 }
 
 td.third {
-  width: 15%;
+  width: 20%;
   color: white;
 }
 
 td.fourth {
-  width: 15%;
+  width: 20%;
   color: white;
 }
 
