@@ -21,7 +21,7 @@ function hideEmptyList() {
 function createMainListItem() {
 	var item = createHTMLItemList();
 
-	addStyleToHTMLWidget(item, "li-has-thumb-left");
+	addStyleToHTMLWidget(item, "li-no-thumb");
 
 	return item;
 }
@@ -29,8 +29,8 @@ function createMainListItem() {
 function createImageItem() {
 	var div = createHTMLDiv();
 
-	addStyleToHTMLWidget(div, "img-icon");
-	addStyleToHTMLWidget(div, "play-icon");
+	//addStyleToHTMLWidget(div, "img-icon");
+	//addStyleToHTMLWidget(div, "play-icon");
 	addStyleToHTMLWidget(div, "ui-li-thumb-left");
 
 	return div;
