@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,user-scalable=no">
+
+
+
+		<title id="mainTitle"></title>
+
+		<link rel="stylesheet" href="../lib/tau/wearable/theme/default/tau.min.css">
+
+		<link rel="stylesheet" media="all and (-tizen-geometric-shape: circle)" href="../lib/tau/wearable/theme/default/tau.circle.min.css">
+		
+		<link rel="stylesheet" href="../css/common.css">
+		<link rel="stylesheet" href="../css/tutorial.css">
+		
+	</head>
+
+	<body onload="javascript:initPage();">
+		<div class="ui-page ui-page-active grad" id="tutorial">
+
+			<div class="ui-content content-padding">
+
+				<span id="btnSkip" class="floating" onclick="onSkipClick(page);"></span>
+
+				<div id="containerTutorial">
+
+					<img id="imgTutorial" src="" />
+
+				</div>
+
+				<p id="msgTutorial"></p>	
+
+			</div>
+			
+			<footer class="ui-footer ui-bottom-button">
+				<a id="btnTutorial" class="ui-btn" 
+				onclick="onContinueClick();"></a>
+			</footer>
+		</div>
+
+		<script src="../lib/tau/wearable/js/tau.min.js"></script>
+
+		<script src="../js/tizen_battery.js"></script>
+		
+		<script src="../js/tizen_events.js"></script>
+
+		<script src="../js/tizen_circle_helper.js"></script>
+
+		<script src="../js/utils_logger.js"></script>
+
+	  	<script src="../js/utils_common.js"></script>
+
+		<script src="../js/utils_html.js"></script>
+
+		<script src="../language.js"></script>
+
+		<script src="../js/presenter_tutorial.js"></script>
+	
+		<script>
+
+			function initPage() {
+				setTexts();
+
+				configPage(page);
+			}
+
+			function onContinueClick() {
+				page++;
+				configPage(page);
+			}
+
+		</script>
+
+	</body>
+</html>

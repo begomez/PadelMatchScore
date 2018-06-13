@@ -1,0 +1,31 @@
+:root {
+}
+
+* {
+    font-family: Verdana, Lucida Sans, Arial, Helvetica, sans-serif;
+}
+
+.floating {
+	margin-top: 5%;
+	margin-right: 5%;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+#containerTutorial {
+
+}
+
+#imgTutorial {
+	padding-top: 5%;
+	display: block;
+	margin: 0 auto;
+}
+
+#msgTutorial {
+	padding-top: 5%;
+	text-align: center;
+}
+
+#btnTutorial

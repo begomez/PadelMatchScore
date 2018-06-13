@@ -170,3 +170,7 @@ function enableHTMLWidget(target) {
 function disableHTMLWidget(target) {
 	window.document.getElementById(target).removeAttribute("onclick");
 }
+
+function loadImage(target, name) {
+	window.document.getElementById(target).src = name;
+}
