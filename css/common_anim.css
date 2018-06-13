@@ -3,8 +3,6 @@
 }
 
 .ball_animated {
-  width: 50%;
-  height: 50%;
   animation: rolling var(--anim_duration) alternate infinite;
   webkit-animation: rolling var(--anim_duration) alternate infinite;
   -webkit-animation-play-state:paused;
