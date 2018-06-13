@@ -6,6 +6,7 @@ var LOADER_CONTAINER = "loaderContainer";
 var LOADER_ICON = "loaderIcon";
 var LOADER_MSG = "loaderMsg";
 var LOADER_ANIMATED = "ball_animated";
+var ID_BTN = "btnAction";
 
 var LOADING_TIME = 2500;
 
@@ -20,6 +21,7 @@ function myPauseFunction() {
 }
 
 function startLoading() {
+	hideHTMLWidget(ID_BTN);
     showHTMLWidget(LOADER_CONTAINER);
     myPlayFunction();
 }
