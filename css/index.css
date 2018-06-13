@@ -23,6 +23,11 @@
 
 .history-icon:before
 {
+   -webkit-mask-image: url(../images/ico_trophy.png); 
+}
+
+.tutorial-icon:before
+{
    -webkit-mask-image: url(../images/ico_court.png); 
 }
 
