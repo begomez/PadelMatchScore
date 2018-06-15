@@ -266,7 +266,7 @@ function fetchAllMatches(db, callback) {
     fetchMatches(db, callback, ALL_MATCHES, true); //finished
 }
 
-function fetchFinishedMatches(db, callback, callbackError) {
+function fetchFinishedMatches(db, startVal, endVal, callback, callbackError) {
     var matches = new Array();
 
     db.transaction(
@@ -275,8 +275,9 @@ function fetchFinishedMatches(db, callback, callbackError) {
                 "SELECT DISTINCT id, timeIni, summary " + 
                 "FROM " + TABLE_NAMES[INDEX_TABLE_MATCH] + " " + 
                 "WHERE timeEnd IS NOT NULL AND summary IS NOT NULL " + 
+                "AND id BETWEEN ? AND ?" + 
                 "ORDER BY 1 DESC", 
-                [], 
+                [(startVal - 1), endVal], 
 
             function(tran, r) {
 
@@ -285,11 +286,6 @@ function fetchFinishedMatches(db, callback, callbackError) {
 
                 } else {
                     for (var i = 0; i < r.rows.length; i++) {
-
-                        if (i == MAX_NUM_MATCHES) {
-                            break;
-                        }
-
                         var current = r.rows.item(i);
 
                         var content = new PadelMatchSummary(current["id"], current["timeIni"], current["summary"]);

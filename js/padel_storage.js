@@ -109,6 +109,7 @@ function storageTime2HTML() {
 		var TIMEZONE_GMT = "GMT";
 
 		var strDate = getLocalStorage().getItem(KEY_TIMESTAMP);
+		
 		ret += strDate.substring(0, strDate.indexOf(TIMEZONE_GMT));
 	}
 
