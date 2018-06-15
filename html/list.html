@@ -20,14 +20,25 @@
 
 	<body onload="javascript:initPage();">
 		<div class="ui-page ui-page-active grad" id="list">
+			
 			<header class="ui-header">
 				<h2 id="secondaryTitle" class="ui-title"></h2>
 			</header>
+			
 			<div class="ui-content content-padding">
+			
+ 				<p id="empty"></p>
+	        
 				<ul id="matchesList" class="ui-listview">
-					<li id="empty"></li>
 	         	</ul>
+
 			</div>
+
+			<footer class="ui-footer ui-bottom-button">
+			
+				<a id="btnAction" class="ui-btn" onclick="getData();"></a>
+
+			</footer>
 		</div>
 
 		<script src="../lib/tau/wearable/js/tau.min.js"></script>

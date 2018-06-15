@@ -8,7 +8,6 @@
     font-family: Verdana, Lucida Sans, Arial, Helvetica, sans-serif;
 }
 
-
 .play-icon:before
 {
    -webkit-mask-image: url(../images/ico_ball.png); 
@@ -21,7 +20,7 @@ span {
 .title {
 	color: yellow;
 	font-style: normal;
-	font-size: 1em;
+	font-size: 0.75em;
 	padding-left: var(--item_pad_left_small);
 }
 
@@ -40,4 +39,9 @@ span {
 
 	line-height: initial;
 	margin: 0;
+}
+
+#empty {
+	text-align: center;
+	font-style: italic;
 }

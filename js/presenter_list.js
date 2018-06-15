@@ -5,13 +5,18 @@
 var ID_TITLE = "mainTitle";
 var ID_SUBTITLE = "secondaryTitle";
 var ID_EMPTY = "empty";
+var ID_BTN = "btnAction";
 
 var TARGET = "matchesList";
+
+var PAGE = 1;
+var OFFSET = 10;
 
 function setTexts() {
 	window.document.getElementById(ID_TITLE).innerHTML = LANG_JSON_DATA["app_name"];
 	window.document.getElementById(ID_SUBTITLE).innerHTML = LANG_JSON_DATA["app_name"];
 	window.document.getElementById(ID_EMPTY).innerHTML = LANG_JSON_DATA["error_no_data"];
+	window.document.getElementById(ID_BTN).innerHTML = LANG_JSON_DATA["action_more"];
 }
 
 function hideEmptyList() {
@@ -39,7 +44,7 @@ function createImageItem() {
 function createDateItem(time) {
 	var title = createHTMLSpan();
 
-	addTextToHTMLWidget(title, formatMilisAsDateShort(time));
+	addTextToHTMLWidget(title, formatMilisAsDate(time));
 	addStyleToHTMLWidget(title, "title");
 
 	return title;
@@ -67,11 +72,15 @@ function getData() {
 	var db = getRepository();
 
 	fetchFinishedMatches(
-		db, 
+		db,
+		PAGE,
+		PAGE * OFFSET, 
 		function(result) {
 			hideEmptyList();
 
 			drawList(result);
+
+			PAGE++;
 		},
 		function() {
 			//XXX: do nothing empty is already shown
@@ -81,6 +90,8 @@ function getData() {
 
 function drawList(result) {
 	var list = window.document.getElementById(TARGET);
+
+	emptyContainer(list);
 
 	for (var i = 0; i < result.length; i++) {
 		var item = createMainListItem();
