@@ -2,7 +2,9 @@
 // Functions used in finish.html
 //////////////////////////////////////////////////////////////
 
-var VIEW_MSG_ID = "current";
+var VIEW_TITLE_ID = "currentTime";
+var VIEW_SUBTITLE_ID = "currentResult";
+
 var VIEW_BTN_ID = "btnAction";
 
 var EMPTY_MSG = LANG_JSON_DATA["error_no_match"];
@@ -13,11 +15,13 @@ function isPlaying() {
 }
 
 function drawEmpty() {
-	writeTextInHTML(VIEW_MSG_ID, EMPTY_MSG);
+	writeTextInHTML(VIEW_TITLE_ID, EMPTY_MSG);
+	hideHTMLWidget(VIEW_SUBTITLE_ID);
 }
 
-function drawItem(result) {
-	writeTextInHTML(VIEW_MSG_ID, result);
+function drawItem(time, score) {
+	writeTextInHTML(VIEW_TITLE_ID, time);
+	writeTextInHTML(VIEW_SUBTITLE_ID, score);
 }
 
 function resetViews() {
@@ -26,7 +30,7 @@ function resetViews() {
 
 function fetchLastMatch() {
 	if (isPlaying()) {
-		drawItem(storageToHTML());
+		drawItem(storageTime2HTML(), storageScore2HTML());
 		enableHTMLWidget(VIEW_BTN_ID);
 
 	} else {

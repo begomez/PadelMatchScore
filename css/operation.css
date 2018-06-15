@@ -1,0 +1,21 @@
+* {
+    font-family: Verdana, Lucida Sans, Arial, Helvetica, sans-serif;
+}
+
+.no-click {
+	pointer-events: none;
+}
+
+.title {
+	color: yellow;
+	font-style: normal;
+	padding: 0;
+}
+
+.subtitle {
+	color: white;
+	font-style: bold;
+	padding-left: 10%;
+	line-height: initial;
+	margin: 0;
+}
