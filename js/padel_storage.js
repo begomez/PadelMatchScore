@@ -102,7 +102,7 @@ function resetMatchInStorage() {
 	logMessage("Data reset from storage");
 }
 
-function storageToHTML() {
+function storageTime2HTML() {
 	var ret = "";
 
 	if (readPlayingMatchFromStorage() == VALUE_TRUE) {
@@ -110,13 +110,16 @@ function storageToHTML() {
 
 		var strDate = getLocalStorage().getItem(KEY_TIMESTAMP);
 		ret += strDate.substring(0, strDate.indexOf(TIMEZONE_GMT));
-		
-		ret += "<br>";
-		
-		ret += getSetsSummary();
+	}
 
-	} else {
-		ret += "";
+	return ret;
+}
+
+function storageScore2HTML() {
+	var ret = "";
+
+	if (readPlayingMatchFromStorage() == VALUE_TRUE) {				
+		ret += getSetsSummary();
 	}
 
 	return ret;
