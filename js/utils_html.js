@@ -107,6 +107,10 @@ function createHTMLItemList() {
 	return createHTMLWidget(WIDGET_LI);
 }
 
+function createHTMLHeader() {
+	return createHTMLWidget(WIDGET_H1);
+}
+
 function createHTMLSpan() {
 	return createHTMLWidget(WIDGET_SPAN);
 }

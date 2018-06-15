@@ -1,5 +1,7 @@
 :root {
-    --item_pad_left: 20px;
+    --item_pad_left_small: 10px;
+    --item_pad_left_mid: 20px;
+    --item_pad_left_big: 30px;
 }
 
 * {
@@ -12,10 +14,30 @@
    -webkit-mask-image: url(../images/ico_ball.png); 
 }
 
-p {
-	padding-left: var(--item_pad_left);
+span {
+	display: block;
 }
 
-span {
-	padding-left: var(--item_pad_left);
+.title {
+	color: yellow;
+	font-style: normal;
+	font-size: 1em;
+	padding-left: var(--item_pad_left_small);
+}
+
+.subtitle {
+	color: yellow;
+	font-style: normal;
+	font-size: 0.75em;
+	padding-left: var(--item_pad_left_mid);
+}
+
+.content {
+	color: red;
+	font-style: bold;
+	font-size: 0.75em;
+	padding-left: var(--item_pad_left_big);
+
+	line-height: initial;
+	margin: 0;
 }

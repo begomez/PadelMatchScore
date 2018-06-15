@@ -44,10 +44,22 @@ function stringToArray(str, separator) {
 	return str.split(separator);
 }
 
-function formatDateInMilis(milis) {
+function formatMilisAsTime(milis) {
+	var GMT = "GMT";
+
+	var date = new Date(milis).toTimeString();
+
+	if (date.includes(GMT)) {
+		date = date.substring(0, date.indexOf(GMT));
+	}
+
+	return date;
+}
+
+function formatMilisAsDate(milis) {
 	return new Date(milis).toDateString();
 }
 
-function formatDateInMilisShort(milis) {
+function formatMilisAsDateShort(milis) {
 	return new Date(milis).toLocaleDateString();
 }

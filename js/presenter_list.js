@@ -37,17 +37,28 @@ function createImageItem() {
 }
 
 function createDateItem(time) {
-	var header = createHTMLSpan();
+	var title = createHTMLSpan();
 
-	addTextToHTMLWidget(header, formatDateInMilisShort(time))
+	addTextToHTMLWidget(title, formatMilisAsDateShort(time));
+	addStyleToHTMLWidget(title, "title");
 
-	return header;
+	return title;
+}
+
+function createTimeItem(time) {
+	var subtitle = createHTMLSpan();
+
+	addTextToHTMLWidget(subtitle, formatMilisAsTime(time));
+	addStyleToHTMLWidget(subtitle, "subtitle");
+
+	return subtitle;
 }
 
 function createSummaryItem(summary) {
-	var content = createHTMLPara();
+	var content = createHTMLHeader();
 
 	addTextToHTMLWidget(content, summary);
+	addStyleToHTMLWidget(content, "content");
 
 	return content;
 }
@@ -74,8 +85,8 @@ function drawList(result) {
 	for (var i = 0; i < result.length; i++) {
 		var item = createMainListItem();
 
-		item.appendChild(createImageItem());
 		item.appendChild(createDateItem(result[i].getTime()));
+		item.appendChild(createTimeItem(result[i].getTime()));
 		item.appendChild(createSummaryItem(result[i].getSummary()));
 
 		list.appendChild(item);
