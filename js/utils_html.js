@@ -73,8 +73,6 @@ function writeScore(target, arr) {
 function resizeElement(large, larger, id) {
     document.getElementById(large).style.fontSize = LARGE;
     document.getElementById(larger).style.fontSize = LARGER;
-    //obj.style.height=increase(PERCENT);
-    //document.getElementById(VISITOR_NAME).style.height=decrease(PERCENT); 
 }
 
 function decrease(percent) {

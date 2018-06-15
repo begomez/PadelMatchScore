@@ -28,6 +28,7 @@ function startLoading() {
 
 function endLoading() {
 	myPauseFunction();
+	hideHTMLWidget(LOADER_CONTAINER);
 }
 
 
