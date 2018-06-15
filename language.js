@@ -10,6 +10,7 @@ LANG_JSON_DATA = {
 	"action_discard" : "Discard",
 	"action_continue" : "Show next",
 	"action_finish" : "Finish",
+	"action_done" : "Done",
 	"action_more" : "More data",
 	"str_current" : "Current match:",
 	"str_game" : "GAME",
@@ -22,7 +23,7 @@ LANG_JSON_DATA = {
 	"finish_success" : "Match stored!",
 	"tutorial_step1" : "Swipe horizontally to increase or decrease points",
 	"tutorial_step2" : "Swipe vertically to increase or decrease games",
-	"tutorial_step3" : "Save your current match and check results on list screen"
+	"tutorial_step3" : "Save matches and check your results!"
 };
 
 

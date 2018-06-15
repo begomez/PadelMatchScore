@@ -36,6 +36,7 @@ function configPage(page) {
 			break;
 		case THIRD_PAGE:
 			window.document.getElementById(ID_MSG).innerHTML = LANG_JSON_DATA["tutorial_step3"];
+			window.document.getElementById(ID_BTN).innerHTML = LANG_JSON_DATA["action_done"];
 			loadImage(ID_IMG, "../images/"+ IMG_STEP_3);
 			break;
 		default:
