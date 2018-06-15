@@ -1,22 +1,16 @@
 //////////////////////////////////////////////////////////////
 // Functions used in discard.html
 //////////////////////////////////////////////////////////////
-
-var ID_TITLE = "mainTitle";
-var ID_SUBTITLE = "secondaryTitle";
-var ID_CURRENT_TIME = "currentTime";
-var ID_CURRENT_SCORE = "currentScore";
-var ID_BTN = "btnAction";
-
 var SUCCESS_MSG = LANG_JSON_DATA["discard_success"];
 
 
 function setTexts() {
-	window.document.getElementById(ID_TITLE).innerHTML = LANG_JSON_DATA["app_name"];
-	window.document.getElementById(ID_SUBTITLE).innerHTML = LANG_JSON_DATA["app_name"];
-	window.document.getElementById(ID_BTN).innerHTML = LANG_JSON_DATA["action_discard"];
-	window.document.getElementById(ID_CURRENT_TIME).innerHTML = LANG_JSON_DATA["str_current"];
-
+	window.document.getElementById(VIEW_TITLE_ID).innerHTML = LANG_JSON_DATA["app_name"];
+	window.document.getElementById(VIEW_SUBTITLE_ID).innerHTML = LANG_JSON_DATA["app_name"];
+	window.document.getElementById(VIEW_TIME_ID).innerHTML = "";
+	window.document.getElementById(VIEW_SCORE_ID).innerHTML = "";
+	window.document.getElementById(VIEW_MSG_ID).innerHTML = LANG_JSON_DATA["error_no_match"];
+	window.document.getElementById(VIEW_BTN_ID).innerHTML = LANG_JSON_DATA["action_discard"];
 }
 
 function discardGameFromStorage() {
@@ -27,20 +21,24 @@ function discardGameFromStorage() {
 			function() {
 				resetMatchInStorage();
 
-				drawDone();
-
-				resetViews();
+				drawDone(SUCCESS_MSG);
 
 				endLoading();
 
 			}, 
 			LOADING_TIME
 		);
+		
+	} else {
+
 	}
 }
 
 function drawDone() {
-	writeTextInHTML(ID_CURRENT_TIME, SUCCESS_MSG);
-	hideHTMLWidget(VIEW_SUBTITLE_ID);
+	showHTMLWidget(VIEW_MSG_ID);
+	writeTextInHTML(VIEW_MSG_ID, SUCCESS_MSG);
+
+	hideHTMLWidget(VIEW_TIME_ID);
+	hideHTMLWidget(VIEW_SCORE_ID);
 }
 

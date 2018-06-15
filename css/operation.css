@@ -19,3 +19,12 @@
 	line-height: initial;
 	margin: 0;
 }
+
+#empty {
+	height: 100%;
+	vertical-align: middle;
+	font-style: italic;
+	text-align: center;
+	display: table-cell;
+	color: white;
+}

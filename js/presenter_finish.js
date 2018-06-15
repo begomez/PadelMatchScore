@@ -1,22 +1,16 @@
 //////////////////////////////////////////////////////////////
 // Functions used in finish.html
 //////////////////////////////////////////////////////////////
-
-var ID_TITLE = "mainTitle";
-var ID_SUBTITLE = "secondaryTitle";
-var ID_CURRENT_TIME = "currentTime";
-var ID_CURRENT_SCORE = "currentScore";
-var ID_BTN = "btnAction";
-
 var SUCCESS_MSG = LANG_JSON_DATA["finish_success"];
 
 
-
 function setTexts() {
-	window.document.getElementById(ID_TITLE).innerHTML = LANG_JSON_DATA["app_name"];
-	window.document.getElementById(ID_SUBTITLE).innerHTML = LANG_JSON_DATA["app_name"];
-	window.document.getElementById(ID_BTN).innerHTML = LANG_JSON_DATA["action_save"];
-	window.document.getElementById(ID_CURRENT_TIME).innerHTML = LANG_JSON_DATA["str_current"];
+	window.document.getElementById(VIEW_TITLE_ID).innerHTML = LANG_JSON_DATA["app_name"];
+	window.document.getElementById(VIEW_SUBTITLE_ID).innerHTML = LANG_JSON_DATA["app_name"];
+	window.document.getElementById(VIEW_TIME_ID).innerHTML = "";
+	window.document.getElementById(VIEW_SCORE_ID).innerHTML = "";
+	window.document.getElementById(VIEW_MSG_ID).innerHTML = LANG_JSON_DATA["error_no_match"];
+	window.document.getElementById(VIEW_BTN_ID).innerHTML = LANG_JSON_DATA["action_save"];
 }
 
 function saveGameInDB() {
@@ -31,6 +25,8 @@ function saveGameInDB() {
 			}, 
 			LOADING_TIME
 		);
+	} else {
+		//XXX: do nothing empty is already shown
 	}
 }
 
@@ -51,16 +47,14 @@ function insertDBData(db, result) {
 
 	resetMatchInStorage();
 
-	drawDone();
-
-	resetViews();
+	drawDone(SUCCESS_MSG);
 
 	endLoading();
 }
 
 function insertLocalScore(db, matchId) {
 	var local = readLocalScoreFromStorage();
-	logMessage("local is" + local);
+
 	var localArr = stringToArray(local, SEPARATOR);
 
 	var localNumArr = new Array();
@@ -100,8 +94,4 @@ function insertVisitorScore(db, matchId) {
 		matchId);
 }
 
-function drawDone() {
-	writeTextInHTML(ID_CURRENT_TIME, SUCCESS_MSG);
-	hideHTMLWidget(VIEW_SUBTITLE_ID);
-}
 
