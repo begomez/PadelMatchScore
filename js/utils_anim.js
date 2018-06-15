@@ -8,7 +8,7 @@ var LOADER_MSG = "loaderMsg";
 var LOADER_ANIMATED = "ball_animated";
 var ID_BTN = "btnAction";
 
-var LOADING_TIME = 2500;
+var LOADING_TIME = 1500;
 
 function myPlayFunction() {
     document.getElementById(LOADER_ICON).style.WebkitAnimationPlayState = "running"; // Code for Chrome, Safari, and Opera

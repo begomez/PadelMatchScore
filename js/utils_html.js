@@ -156,13 +156,21 @@ function createHTMLWidget(type) {
 }
 
 function showHTMLWidget(ident) {
-	window.document.getElementById(ident).style.visibility = "visible";
-	window.document.getElementById(ident).style.display = "block";
+	var widget = window.document.getElementById(ident);
+
+	if (widget != null) {
+		widget.style.visibility = "visible";
+		widget.style.display = "block";
+	}
 }
 
 function hideHTMLWidget(ident) {
-	window.document.getElementById(ident).style.visibility = "hidden";
-	window.document.getElementById(ident).style.display = "none";
+	var widget = window.document.getElementById(ident);
+
+	if (widget != null) {
+		widget.style.visibility = "hidden";
+		widget.style.display = "none";
+	}
 }
 
 function enableHTMLWidget(target) {
@@ -175,4 +183,16 @@ function disableHTMLWidget(target) {
 
 function loadImage(target, name) {
 	window.document.getElementById(target).src = name;
+}
+
+function emptyContainer(container) {
+	while (container.hasChildNodes()) {
+		container.removeChild(container.lastChild);
+	}
+/*
+	var empty = createHTMLItemList();
+	empty.id = "empty";
+
+	container.appendChild(empty);
+*/
 }
