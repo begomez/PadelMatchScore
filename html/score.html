@@ -16,7 +16,7 @@
 	    <link rel="stylesheet" href="../css/score.css">
 	</head>
 
-	<body>
+	<body onload="initPage();">
 
 		<div class="ui-page ui-page-active grad" id="score" >
 		
@@ -140,14 +140,12 @@
 
 			$(document).ready(
 				function() {
-					initPage();
+					initComponents();
 				}
 			);
 
   			function initPage() {
 				setTexts();
-
-				initComponents();
 
 				prepareRepository();
 
