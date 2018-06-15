@@ -11,6 +11,7 @@
 	position: absolute;
 	top: 0px;
 	right: 0px;
+	color: yellow;
 }
 
 #containerTutorial {
@@ -26,6 +27,8 @@
 #msgTutorial {
 	padding-top: 5%;
 	text-align: center;
+	font-style: italic;
+	font-size: 0.85em;
 }
 
 #btnTutorial
