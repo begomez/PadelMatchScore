@@ -2,22 +2,29 @@
 // Utils to log both messages and errors
 //////////////////////////////////////////////////////////////
 
+var LOG_MSG = true;
+var LOG_ERROR = true;
+
 /**
  * Log message in output
  */
 function logMessage(msg) {
-	//alert(msg);
-	console.log(msg);
+	if (LOG_MSG) {
+		console.log(msg);
+	}
 }
 
 function logChange() {
-	alert("Change here...");
+	if (LOG_MSG) {
+		console.log("...");
+	}	
 }
 
 /**
  * Log error in error output
  */
 function logError(errorMsg) {
-	//alert(errorMsg);
-	console.error(errorMsg);
+	if (LOG_ERROR) {
+		console.error(errorMsg);
+	}
 }
