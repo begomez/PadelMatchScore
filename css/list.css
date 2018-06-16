@@ -17,6 +17,10 @@ span {
 	display: block;
 }
 
+li {
+	text-align: center;
+}
+
 .title {
 	color: yellow;
 	font-style: normal;

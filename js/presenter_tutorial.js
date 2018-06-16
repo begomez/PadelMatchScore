@@ -2,7 +2,7 @@
 // Functions used in splash.html
 //////////////////////////////////////////////////////////////
 
-var IMG_STEP_1 = "tut_step_2.png";
+var IMG_STEP_1 = "tut_step_1.png";
 var IMG_STEP_2 = "tut_step_3.png";
 var IMG_STEP_3 = "tut_step_4.png";
 
