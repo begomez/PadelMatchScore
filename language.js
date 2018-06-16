@@ -3,12 +3,12 @@ LANG_JSON_DATA = {
 	"option_start" : "Play",
 	"option_finish" : "Finish",
 	"option_discard" : "Discard",
-	"option_history" : "History",
-	"option_tutorial" : "Tutorial",
+	"option_history" : "Results",
+	"option_tutorial" : "HowTo",
 	"action_skip" : "Skip",
 	"action_save" : "Save",
 	"action_discard" : "Discard",
-	"action_continue" : "Show next",
+	"action_continue" : "Next tip",
 	"action_finish" : "Finish",
 	"action_done" : "Done",
 	"action_more" : "More data",
@@ -23,7 +23,7 @@ LANG_JSON_DATA = {
 	"finish_success" : "Match stored!",
 	"tutorial_step1" : "Swipe horizontally to increase or decrease points score",
 	"tutorial_step2" : "Swipe vertically to increase or decrease games score",
-	"tutorial_step3" : "Save matches and check your results!"
+	"tutorial_step3" : "Save match results and check your records!"
 };
 
 
