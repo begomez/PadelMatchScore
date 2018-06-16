@@ -44,3 +44,7 @@ body {
     font-size:5em;
     color:#fff;
 }
+
+#btnAction {
+    font-weight: bold;
+}

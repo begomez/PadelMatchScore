@@ -21,8 +21,8 @@ LANG_JSON_DATA = {
 	"error_no_data" : "No stored matches",
 	"discard_success" : "Match discarded!",
 	"finish_success" : "Match stored!",
-	"tutorial_step1" : "Swipe horizontally to increase or decrease points",
-	"tutorial_step2" : "Swipe vertically to increase or decrease games",
+	"tutorial_step1" : "Swipe horizontally to increase or decrease points score",
+	"tutorial_step2" : "Swipe vertically to increase or decrease games score",
 	"tutorial_step3" : "Save matches and check your results!"
 };
 
