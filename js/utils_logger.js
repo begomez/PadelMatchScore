@@ -2,8 +2,8 @@
 // Utils to log both messages and errors
 //////////////////////////////////////////////////////////////
 
-var LOG_MSG = true;
-var LOG_ERROR = true;
+var LOG_MSG = false;
+var LOG_ERROR = false;
 
 /**
  * Log message in output
