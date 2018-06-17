@@ -19,7 +19,7 @@ LANG_JSON_DATA = {
 	"str_set3" : "SET3",
 	"error_no_match" : "No current match",
 	"error_no_data" : "No stored matches",
-	"discard_success" : "Match discarded!",
+	"discard_success" : "Match discarded",
 	"finish_success" : "Match saved!",
 	"tutorial_step1" : "Swipe horizontally to increase or decrease points score",
 	"tutorial_step2" : "Swipe vertically to increase or decrease games score",

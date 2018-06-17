@@ -6,8 +6,8 @@
 }
 
 .floating {
-	margin-top: 5%;
-	margin-right: 5%;
+	margin-top: 15%;
+	margin-right: 15%;
 	position: absolute;
 	top: 0px;
 	right: 0px;
@@ -20,6 +20,7 @@
 
 #imgTutorial {
 	padding-top: 5%;
+	height: 15%;
 	display: block;
 	margin: 0 auto;
 }

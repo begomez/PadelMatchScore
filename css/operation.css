@@ -9,13 +9,15 @@
 .title {
 	color: yellow;
 	font-style: normal;
+	font-size: 0.75em;
 	padding: 0;
 }
 
 .subtitle {
 	color: white;
 	font-style: bold;
-	padding-left: 10%;
+	font-size: 0.75em;
+	padding-left: 5%;
 	line-height: initial;
 	margin: 0;
 }
