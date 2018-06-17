@@ -5,7 +5,7 @@ LANG_JSON_DATA = {
 	"option_discard" : "Discard",
 	"option_history" : "Results",
 	"option_tutorial" : "HowTo",
-	"action_skip" : "Skip",
+	"action_skip" : "Exit",
 	"action_save" : "Save",
 	"action_discard" : "Discard",
 	"action_continue" : "Next tip",
@@ -20,7 +20,7 @@ LANG_JSON_DATA = {
 	"error_no_match" : "No current match",
 	"error_no_data" : "No stored matches",
 	"discard_success" : "Match discarded!",
-	"finish_success" : "Match stored!",
+	"finish_success" : "Match saved!",
 	"tutorial_step1" : "Swipe horizontally to increase or decrease points score",
 	"tutorial_step2" : "Swipe vertically to increase or decrease games score",
 	"tutorial_step3" : "Save match results and check your records!"
