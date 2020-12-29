@@ -1,53 +1,27 @@
-function initBezel(ident, toRight, toLeft) {
+var DIRECTION_CW = "CW";
+var DIRECTION_CCW = "CCW";
+
+function initBezel(tau, ident, toRight, toLeft) {
     var page = document.getElementById(ident); /* Query with page ID */
-
-    page.addEventListener('popupshow', function popupOpenHandler(e) {
-        var popup = e.target, /* Popup element */
-
-            /* Rotary event handler */
-            rotaryEventHandler = function(e) {
-                if (e.detail.direction === 'CW') {
-                    /* Right direction */
-                    
-                    console.log("CW");
-                    
-                    toRight();
-                    
-                } else if (e.detail.direction === 'CCW') {
-                    /* Left direction */
-                    
-                    console.log("CCW");
-                    
-                    toLeft();
-                }
-            };
-
-        /* Register the rotary event */
-        document.addEventListener('rotarydetent', rotaryEventHandler, false);
-
-        /* Deregister the rotary event */
-        popup.addEventListener('popuphide', function popupHideHandler() {
-            popup.removeEventListener('popuphide', popupHideHandler, false);
-            document.removeEventListener('rotarydetent', rotaryEventHandler, false);
-        }, false);
-    }, false);
 
     page.addEventListener('pagebeforeshow', function pageScrollHandler(e) {
         var page = e.target;
 
         /* Rotary event handler */
         rotaryEventHandler = function(e) {
-            if (e.detail.direction === 'CW') {
+            if (e.detail.direction === DIRECTION_CW) {
                 /* Right direction */
-                console.log("CW");
+                console.log("rotating CW");
                 
                 toRight();
                 
-            } else if (e.detail.direction === 'CCW') {
+                
+            } else if (e.detail.direction === DIRECTION_CCW) {
                 /* Left direction */
-                console.log("CCW");
+                console.log("rotating CCW");
                 
                 toLeft();
+               
             }
         };
 
@@ -59,6 +33,5 @@ function initBezel(ident, toRight, toLeft) {
             page.removeEventListener('pagebeforehide', pageHideHandler, false);
             document.removeEventListener('rotarydetent', rotaryEventHandler, false);
         }, false);
-
     }, false);
 }

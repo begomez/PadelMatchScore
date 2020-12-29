@@ -24,7 +24,7 @@
 				<h2 id="secondaryTitle" class="ui-title"></h2>
 			</header>
 			<div class="ui-content content-padding">
-				<ul class="ui-listview">
+				<ul id="listContent" class="ui-listview">
 		            <li class="li-has-thumb-left">
 		            	<a onclick="navigateTo('score.html');">
     	                	<div class="img-icon play-icon ui-li-thumb-left"></div>
@@ -86,9 +86,30 @@
 			}
 			
 		    initBezel(
+		    		tau,
 		    		"main", 
-		    		function() {}, 
-		    		function() {}
+		    		function() {
+		    			var snapList = document.getElementById("listContent");
+			    		var snapListComponent = tau.widget.SnapListview(snapList);
+			    		var index = 0;
+			    		var selectedIndex = snapListComponent.getSelectedIndex();
+			    		if (selectedIndex !== null) {
+			    			index = selectedIndex;
+			    		}   
+				    console.log("index is " + index);			    
+			    		snapListComponent.scrollToPosition(++index);
+		    		},
+		    		function() {		
+		    			var snapList = document.getElementById("listContent");
+			    		var snapListComponent = tau.widget.SnapListview(snapList);
+			    		var index = 0;
+			    		var selectedIndex = snapListComponent.getSelectedIndex();
+			    		if (selectedIndex !== null) {
+			    			index = selectedIndex;
+			    		}   
+				    console.log("index is " + index);			    
+			    		snapListComponent.scrollToPosition(--index);
+		    		}
 	    		);
 	</script>
 		
