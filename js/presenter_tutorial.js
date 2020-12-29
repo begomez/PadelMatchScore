@@ -23,6 +23,8 @@ function setTexts() {
 }
 
 function configPage(page) {
+	window.document.getElementById("tutorial").scrollTop = 0;
+
 	logMessage("Navigating to page " + page);
 
 	switch(page) {
