@@ -16,11 +16,13 @@
 	    <link rel="stylesheet" href="../css/score.css">
 	</head>
 
-	<body onload="initPage();">
+	<body onload="javascript:initPage();">
 
 		<div class="ui-page ui-page-active grad" id="score" >
+			
+			<div class="ui-content content-padding">
 		
-        	<div id="local" class="container" onmouseover="javascript:onLocalSelected(this);">
+        			<div id="local" class="container" onmouseover="javascript:onLocalSelected(this);">
 
 				<table id="contentLocal">
 
@@ -49,9 +51,9 @@
 
 				</table>
 
-          	</div>
+          		</div>
 
-          	<div id="separator">
+          		<div id="separator">
 
 				<table id="titles">
 
@@ -72,11 +74,11 @@
 
 				</table>
 
-	        </div>
+	        		</div>
 
-            <div id="visitor" class="container" onmouseover="javascript:onVisitorSelected(this);">
+            		<div id="visitor" class="container" onmouseover="javascript:onVisitorSelected(this);">
 
-            	<table id="contentVisitor">
+            		<table id="contentVisitor">
 
 	                <tr>
 	                  <td class="first" >
@@ -103,22 +105,20 @@
               </table>
 
 			</div>
-
+		
 		</div>
-
-	  	<script src="../js/jquery-1.11.3.min.js"></script>
-
-	  	<script src="../js/jquery.mobile-1.4.5.min.js"></script>
+		
+	</div>
 
 		<script src="../lib/tau/wearable/js/tau.min.js"></script>
+
+		<script src="../js/bezel.js"></script>	
 
 		<script src="../js/tizen_battery.js"></script>
 		
 		<script src="../js/tizen_circle_helper.js"></script>
 		
-		<script src="../js/tizen_events.js"></script>
-				
-		<script src="../js/lib_swipe.js"></script>	
+		<script src="../js/tizen_events.js"></script>	
 
 		<script src="../js/utils_logger.js"></script>
 
@@ -135,6 +135,12 @@
 		<script src="../language.js"></script>	
 
 		<script src="../js/presenter_score.js"></script>	
+		
+		<script src="../js/jquery-1.11.3.min.js"></script>
+
+	  	<script src="../js/jquery.mobile-1.4.5.min.js"></script>
+		
+		<script src="../js/lib_swipe.js"></script>	
 
 		<script>	
 
@@ -143,6 +149,8 @@
 					initComponents();
 				}
 			);
+
+			//initBezel("score", function(){console.log("1");}, function(){console.log("2");});
 
   			function initPage() {
 				setTexts();
@@ -154,9 +162,15 @@
 
 				} else {
 					createMatch();	
-				}
- 			}
-
+				}			
+			}
+			
+			initBezel(
+		    		"score", 
+		    		function() {}, 
+		    		function() {}
+	    		);
+			
 	  	</script> 
 
 	</body>

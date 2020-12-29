@@ -26,7 +26,7 @@
 			<div class="ui-content content-padding">
 				<ul class="ui-listview">
 		            <li class="li-has-thumb-left">
-		            	<a class="play-icon" onclick="navigateTo('score.html');">
+		            	<a onclick="navigateTo('score.html');">
     	                	<div class="img-icon play-icon ui-li-thumb-left"></div>
     	                	<span id="item1"></span>
 	                	</a>
@@ -70,6 +70,8 @@
 		<script src="../js/utils_html.js"></script>
 
 		<script src="../language.js"></script>
+		
+		<script src="../js/bezel.js"></script>
 
 		<script src="../js/presenter_index.js"></script>
 
@@ -82,8 +84,13 @@
 			function initPage() {
 				setTexts();
 			}
-
-		</script> 
-	
+			
+		    initBezel(
+		    		"main", 
+		    		function() {}, 
+		    		function() {}
+	    		);
+	</script>
+		
 	</body>
 </html>
