@@ -9,11 +9,11 @@
 .ui-listview li .img-icon {
    position: absolute;
    top: 50%;
-   width: 86px;
-   height: 86px;
-   margin: 0;
+   width: 36px;
+   height: 36px;
+   margin: 0px;
    padding: 0;
-   -webkit-transform: translate3d(0, -50%, 0);
+   -webkit-transform: translate3d(0%, -50%, 0);
    background-color: rgba(0,31,56,1);
 }
 

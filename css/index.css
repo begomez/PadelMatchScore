@@ -34,3 +34,9 @@
 span {
 	padding-left: var(--item_pad_left);
 }
+
+
+#item1, #item2, #item3, #item4, #item5 {
+	margin-left: 40px;
+	text-align: center;
+}
