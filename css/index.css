@@ -40,3 +40,49 @@ span {
 	margin-left: 40px;
 	text-align: center;
 }
+
+
+.ui-listview li .li-text-sub {
+   display: block;
+   text-overflow: ellipsis;
+   overflow: hidden;
+   line-height: 32px;
+   color: rgb(51, 51, 51);
+}
+
+.ui-listview li.li-has-3line {
+   padding-top: 0;
+   padding-bottom: 0;
+   height: 115px;
+}
+
+.ui-listview.expand-list li.li-has-3line .ui-marquee {
+   -webkit-transform: translate3d(0, 30px, 0);
+}
+
+.ui-listview.expand-list li.li-has-3line.ui-snap-listview-selected .ui-marquee {
+   -webkit-transform: translate3d(0, 0, 0);
+   -webkit-transition: all ease 1s;
+}
+
+.ui-listview.expand-list li.li-has-3line .ui-li-sub-text:nth-child(2) {
+   -webkit-transform: translate3d(0, -10px, 0);
+   opacity: 0;
+}
+
+.ui-listview.expand-list li.li-has-3line.ui-snap-listview-selected .ui-li-sub-text:nth-child(2) {
+   -webkit-transform: translate3d(0, 0, 0);
+   opacity: 1;
+   -webkit-transition: all ease 1s;
+}
+
+.ui-listview.expand-list li.li-has-3line .ui-li-sub-text:last-child {
+   -webkit-transform: translate3d(0, -42px, 0);
+   opacity: 0;
+}
+
+.ui-listview.expand-list li.li-has-3line.ui-snap-listview-selected .ui-li-sub-text:last-child {
+   -webkit-transform: translate3d(0, 0, 0);
+   opacity: 1;
+   -webkit-transition: all ease 1s;
+}
