@@ -4,6 +4,7 @@ LANG_JSON_DATA = {
 	"option_finish" : "Finish",
 	"option_discard" : "Discard",
 	"option_history" : "Results",
+	"option_stats" : "Stats",
 	"option_tutorial" : "HowTo",
 	"action_skip" : "Exit",
 	"action_save" : "Save",

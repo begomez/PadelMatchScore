@@ -26,6 +26,11 @@
    -webkit-mask-image: url(../images/ico_trophy.png); 
 }
 
+.stats-icon:before
+{
+   -webkit-mask-image: url(../images/ico_court.png); 
+}
+
 .tutorial-icon:before
 {
    -webkit-mask-image: url(../images/ico_court.png); 
@@ -36,7 +41,7 @@ span {
 }
 
 
-#item1, #item2, #item3, #item4, #item5 {
+#item1, #item2, #item3, #item4, #item5, #item6 {
 	margin-left: 40px;
 	text-align: center;
 }
