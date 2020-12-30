@@ -4,16 +4,16 @@
 	<head>
 		<meta name="viewport" content="width=device-width,user-scalable=no">
 
-
-
 		<title id="mainTitle"></title>
 		
 		<link rel="stylesheet" href="../lib/tau/wearable/theme/default/tau.min.css">
-
 		<link rel="stylesheet" media="all and (-tizen-geometric-shape: circle)" href="../lib/tau/wearable/theme/default/tau.circle.min.css">
 
 		<link rel="stylesheet" href="../css/common.css">
 	    <link rel="stylesheet" href="../css/score.css">
+	    
+	    <script src="../js/tizen_circle_helper.js"></script>
+		<script src="../lib/tau/wearable/js/tau.js"></script>
 	</head>
 
 	<body onload="javascript:initPage();">
@@ -104,35 +104,32 @@
 	                </tr>
               </table>
 
+			  </div>
+		
 			</div>
 		
 		</div>
-		
-	</div>
 
-		<script src="../lib/tau/wearable/js/tau.min.js"></script>
-
-		<script src="../js/bezel.js"></script>	
 
 		<script src="../js/tizen_battery.js"></script>
-		
-		<script src="../js/tizen_circle_helper.js"></script>
-		
+				
 		<script src="../js/tizen_events.js"></script>	
+
+		<script src="../js/bezel.js"></script>	
+		
+		<script src="../language.js"></script>	
+		
+	  	<script src="../js/utils_html.js"></script>
 
 		<script src="../js/utils_logger.js"></script>
 
 	  	<script src="../js/utils_common.js"></script>
-
-	  	<script src="../js/utils_html.js"></script>
 
 	  	<script src="../js/padel_database.js"></script>
 
 	  	<script src="../js/padel_storage.js"></script>
 
 		<script src="../js/padel_core.js"></script>	
-
-		<script src="../language.js"></script>	
 
 		<script src="../js/presenter_score.js"></script>	
 		
@@ -149,8 +146,6 @@
 					initComponents();
 				}
 			);
-
-			//initBezel("score", function(){console.log("1");}, function(){console.log("2");});
 
   			function initPage() {
 				setTexts();
