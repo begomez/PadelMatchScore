@@ -236,3 +236,11 @@ function onVisitorSelected(obj) {
 
     scoreCurrent = scoreVisitor;  
 }
+
+function onDiscardBtnClick() {
+	console.log("DISCARDING");
+}
+
+function onSaveBtnClick() {
+	console.log("SAVING");
+}

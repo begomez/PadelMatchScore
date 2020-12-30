@@ -160,6 +160,23 @@
 				}			
 			}
 			
+			 initBezel(
+		    		tau,
+		    		"score", 
+		    		function() {
+		    			var save = confirm(LANG_JSON_DATA["confirm_save"]);
+		    			if (save == true) {
+		    				onSaveBtnClick();
+		    			}
+		    		},
+		    		function() {		
+		    			var discard = confirm(LANG_JSON_DATA["confirm_discard"]);
+		    			if (discard == true) {
+		    				onDiscardBtnClick();
+		    			}
+		    		}
+	    		);
+			
 	  	</script> 
 
 	</body>
