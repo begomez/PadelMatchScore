@@ -21,14 +21,14 @@ function myPauseFunction() {
 }
 
 function startLoading() {
-	hideHTMLWidget(ID_BTN);
-    showHTMLWidget(LOADER_CONTAINER);
-    myPlayFunction();
+	//hideHTMLWidget(ID_BTN);
+    //showHTMLWidget(LOADER_CONTAINER);
+    //myPlayFunction();
 }
 
 function endLoading() {
-	myPauseFunction();
-	hideHTMLWidget(LOADER_CONTAINER);
+	//myPauseFunction();
+	//hideHTMLWidget(LOADER_CONTAINER);
 }
 
 

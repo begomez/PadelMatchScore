@@ -239,8 +239,12 @@ function onVisitorSelected(obj) {
 
 function onDiscardBtnClick() {
 	console.log("DISCARDING");
+	
+	discardGameFromStorage();
 }
 
 function onSaveBtnClick() {
 	console.log("SAVING");
+	
+	saveGameInDB();
 }
