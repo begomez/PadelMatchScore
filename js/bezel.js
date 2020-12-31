@@ -4,7 +4,7 @@ var DIRECTION_CCW = "CCW";
 var locked = false;
 
 
-function initBezel(tau, ident, toRight, toLeft) {
+function initBezel(tau, ident, toRight, toLeft, delay) {
     var page = document.getElementById(ident); /* Query with page ID */
 
     
@@ -23,7 +23,7 @@ function initBezel(tau, ident, toRight, toLeft) {
                 		toRight();
                 		setTimeout(
             				function() {locked = false;}, 
-            				DELAY
+            				delay
         				);
                 }
                     
@@ -35,7 +35,7 @@ function initBezel(tau, ident, toRight, toLeft) {
                 		toLeft();
                 		setTimeout(
             				function() {locked = false;},
-            				DELAY
+            				delay
                 		);
                 }
             }
