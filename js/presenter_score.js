@@ -64,6 +64,22 @@ function initDataStruct() {
 }
 
 function initListeners() {
+    $(".l").on("swipeleft", function(){
+    		onLocalSelected($(PLAYER_LOCAL_NAME.toLowerCase()));
+    });
+
+    $(".v").on("swipeleft", function(){
+		onVisitorSelected($(PLAYER_VISITOR_NAME.toLowerCase()));
+    });
+
+    $(".l").on("swiperight", function(){
+		onLocalSelected($(PLAYER_LOCAL_NAME.toLowerCase()));
+	});
+	
+	$(".v").on("swiperight", function(){
+		onVisitorSelected($(PLAYER_VISITOR_NAME.toLowerCase()));
+	});
+    
     $("td.first").on("swipeleft", function(){
         decreasePoints(this);
 
@@ -76,11 +92,27 @@ function initListeners() {
         saveMatch();
     });                       
 
+    $(".l").on("swipeup", function(){
+        onLocalSelected($(PLAYER_LOCAL_NAME.toLowerCase()));
+    });  
+    
+    $(".v").on("swipeup", function(){
+        onVisitorSelected($(PLAYER_VISITOR_NAME.toLowerCase()));
+    }); 
+    
     $("td.second, td.third, td.fourth").on("swipeup", function(){
         updateUI(this, true);
 
         saveMatch();
     });   
+
+    $(".l").on("swipedown", function(){
+        onLocalSelected($(PLAYER_LOCAL_NAME.toLowerCase()));
+    });  
+    
+    $(".v").on("swipedown", function(){
+        onVisitorSelected($(PLAYER_VISITOR_NAME.toLowerCase()));
+    }); 
 
     $("td.second, td.third, td.fourth").on("swipedown", function(){
         updateUI(this, false);
