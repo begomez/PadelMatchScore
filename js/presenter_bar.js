@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////
-// Functions used in stats.html
+// Functions used in bar.html
 //////////////////////////////////////////////////////////////
 
 
@@ -11,31 +11,35 @@ function setTexts() {
 	window.document.getElementById(ID_SUBTITLE).innerHTML = LANG_JSON_DATA["app_name"];
 }
 
-function initGraph() {
-	var page = document.getElementById("stats"),
+function initGraph () {
+	var page = document.getElementById("bar"),
 		graphEl = document.getElementById("graph"),
-		titleMarquee = page.querySelector("header"),
 		graphWidget,
-		marquee;
+		data,
+		i,
+		numberOfBars = 7,
+		x,
+		y,
+		label;
 
 	page.addEventListener("pagebeforeshow", function () {
 		graphWidget = tau.widget.Graph(graphEl);
-	});
-	
-	page.addEventListener("pageshow", function () {
-		marquee = tau.widget.Marquee(titleMarquee, {
-			iteration: "infinite",
-			marqueeStyle: "scroll",
-			ellipsisEffect: "none",
-			speed: 40,
-			delay: 1000
-		});
-	});
+		data = [];
 
-	page.addEventListener("pagebeforehide", function () {
-		graphWidget.destroy();
-		marquee.destroy();
+		label = "Series 1";
+		for (i = 0; i < numberOfBars; i++) {
+			x = i + 1;
+			y = Math.round(Math.random() * 20);
+			data.push({x: x, y: y, label: label});
+		}
+
+		label = "Series 2";
+		for (i = 0; i < numberOfBars; i++) {
+			x = i + 1;
+			y = Math.round(Math.random() * 20);
+			data.push({x: x, y: y, label: label});
+		}
+
+		graphWidget.value(data);
 	});
-	
-	console.log("Done!");
-}
+};
