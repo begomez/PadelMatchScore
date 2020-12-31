@@ -29,7 +29,9 @@ LANG_JSON_DATA = {
 	"tutorial_step3" : "When playing, use bezel to save or discard a match",
 	"tutorial_step4" : "Check match results and review your statistics!",
 	"confirm_save" : "Save\ncurrent match\nand finish?",
-	"confirm_discard" : "Discard\ncurrent match?"
+	"confirm_discard" : "Discard\ncurrent match?",
+	"stats_x" : "Matches",
+	"stats_y" : "Sets"
 };
 
 

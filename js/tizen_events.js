@@ -15,6 +15,8 @@
 			} else {
 				window.history.back();
 			}
+		} else {
+			console.log(ev.keyName);
 		}
 	} );
 } () );
