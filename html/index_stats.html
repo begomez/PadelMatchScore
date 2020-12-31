@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,user-scalable=no">
+
+		<title id="mainTitle"></title>
+
+		<link rel="stylesheet" href="../lib/tau/wearable/theme/default/tau.min.css">
+		<link rel="stylesheet" media="all and (-tizen-geometric-shape: circle)" href="../lib/tau/wearable/theme/default/tau.circle.min.css">
+
+		<link rel="stylesheet" href="../css/common.css">
+		<link rel="stylesheet" href="../css/common_list.css">
+		<link rel="stylesheet" href="../css/index.css">
+			
+		<script src="../js/tizen_circle_helper.js"></script>
+		<script src="../lib/tau/wearable/js/tau.js"></script>
+	</head>
+
+	<body onload="javascript:initPage();">
+		<div class="ui-page ui-page-active grad" id="mainStats">
+		
+			<header class="ui-header">
+				<h2 id="secondaryTitle" class="ui-title"></h2>
+			</header>
+			
+			<div class="ui-content content-padding">
+				<ul id="listContent" class="ui-listview">
+		            
+		            <li class="li-has-thumb-left">
+		            	<div onclick="navigateTo('bar.html');">
+    	                	<div class="img-icon finish-icon ui-li-thumb-left"></div>
+    	                	<span id="item1"></span>
+		            	</div>
+		            </li>
+		            
+		           
+		            <li class="li-has-thumb-left">
+		            	<div onclick="navigateTo('stats.html');">
+    	                	<div class="img-icon discard-icon ui-li-thumb-left"></div>
+    	                	<span id="item2"></span>
+		            	</div>
+		            </li>
+	         	</ul>
+         	</div>
+		</div>
+
+
+		<script src="../js/tizen_events.js"></script>
+
+		<script src="../js/tizen_battery.js"></script>
+
+		<script src="../language.js"></script>		
+
+		<script src="../js/utils_html.js"></script>
+
+		<script src="../js/presenter_index_stats.js"></script>
+
+		<script>
+
+			function initPage() {
+				setTexts();
+			}
+			
+		</script>
+		
+	</body>
+</html>
