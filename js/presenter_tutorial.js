@@ -32,18 +32,22 @@ function configPage(page) {
 	switch(page) {
 		case FIRST_PAGE:
 			window.document.getElementById(ID_MSG).innerHTML = LANG_JSON_DATA["tutorial_step1"];
+			hideHTMLWidget(ID_BTN);
 			loadImage(ID_IMG, "../images/" + IMG_STEP_1);
 			break;
 		case SECOND_PAGE:
 			window.document.getElementById(ID_MSG).innerHTML = LANG_JSON_DATA["tutorial_step2"];
+			hideHTMLWidget(ID_BTN);
 			loadImage(ID_IMG, "../images/" + IMG_STEP_2);
 			break;
 		case THIRD_PAGE:
 			window.document.getElementById(ID_MSG).innerHTML = LANG_JSON_DATA["tutorial_step3"];
+			hideHTMLWidget(ID_BTN);
 			loadImage(ID_IMG, "../images/"+ IMG_STEP_3);
 			break;
 		case FOURTH_PAGE:
 			window.document.getElementById(ID_MSG).innerHTML = LANG_JSON_DATA["tutorial_step4"];
+			showHTMLWidget(ID_BTN);
 			window.document.getElementById(ID_BTN).innerHTML = LANG_JSON_DATA["action_done"];
 			loadImage(ID_IMG, "../images/"+ IMG_STEP_4);
 			break;
