@@ -1,27 +1,43 @@
+var DELAY = 3000;
 var DIRECTION_CW = "CW";
 var DIRECTION_CCW = "CCW";
+var locked = false;
+
 
 function initBezel(tau, ident, toRight, toLeft) {
     var page = document.getElementById(ident); /* Query with page ID */
 
+    
     page.addEventListener('pagebeforeshow', function pageScrollHandler(e) {
         var page = e.target;
 
+        
         /* Rotary event handler */
-        rotaryEventHandler = function(e) {
-            if (e.detail.direction === DIRECTION_CW) {
+        rotaryEventHandler = function rotHandler(e) {
+   
+        	if (e.detail.direction === DIRECTION_CW) {
                 /* Right direction */
                 console.log("rotating CW");
-                
-                toRight();
-                
-                
+                if (locked == false) {
+                		locked = true;
+                		toRight();
+                		setTimeout(
+            				function() {locked = false;}, 
+            				DELAY
+        				);
+                }
+                    
             } else if (e.detail.direction === DIRECTION_CCW) {
                 /* Left direction */
                 console.log("rotating CCW");
-                
-                toLeft();
-               
+                if (locked == false) {
+                		locked = true;
+                		toLeft();
+                		setTimeout(
+            				function() {locked = false;},
+            				DELAY
+                		);
+                }
             }
         };
 
