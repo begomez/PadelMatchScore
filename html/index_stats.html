@@ -20,15 +20,15 @@
 	<body onload="javascript:initPage();">
 		<div class="ui-page ui-page-active grad" id="mainStats">
 		
-			<header class="ui-header">
+			<header id="header" class="ui-header">
 				<h2 id="secondaryTitle" class="ui-title"></h2>
 			</header>
 			
-			<div class="ui-content content-padding">
+			<div id="content" class="ui-content content-padding">
 				<ul id="listContent" class="ui-listview">
 		            
 		            <li class="li-has-thumb-left">
-		            	<div onclick="navigateTo('bar.html');">
+		            	<div onclick="navigateTo('stats_bars.html');">
     	                	<div class="img-icon finish-icon ui-li-thumb-left"></div>
     	                	<span id="item1"></span>
 		            	</div>
@@ -36,7 +36,7 @@
 		            
 		           
 		            <li class="li-has-thumb-left">
-		            	<div onclick="navigateTo('stats.html');">
+		            	<div onclick="navigateTo('stats_graph.html');">
     	                	<div class="img-icon discard-icon ui-li-thumb-left"></div>
     	                	<span id="item2"></span>
 		            	</div>

@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width,user-scalable=no">
-
+ 
   		<meta http-equiv="refresh" content="3; url=index.html">
 
 		<title id="mainTitle"></title>
@@ -12,6 +12,7 @@
 		<link rel="stylesheet" media="all and (-tizen-geometric-shape: circle)" href="../lib/tau/wearable/theme/default/tau.circle.min.css">
 		
 		<link rel="stylesheet" href="../css/common.css">
+		<link rel="stylesheet" href="../css/common_anim.css">
 		<link rel="stylesheet" href="../css/splash.css">
 		
 	    <script src="../js/tizen_circle_helper.js"></script>
@@ -20,11 +21,12 @@
 	
 	<body onload="javascript:initPage();">
 		<div class="ui-page ui-page-active grad" id="splash">
-			<div class="ui-content content-padding">
+			<div id="content" class="ui-content content-padding">
 					
 				<div id="splash_container">
-					<img id="splash_img" src="../images/tennis_ball_with_shadow.png">
+					<img id="splash_img" class="ball_animated" src="../images/tennis_ball.png">
 				</div>
+				
 			</div>
 		</div>
 		
@@ -41,6 +43,8 @@
 
 		<script src="../js/utils_common.js"></script>
 
+		<script src="../js/utils_anim.js"></script>
+
 		<script src="../js/padel_storage.js"></script>
 
 		<script src="../js/padel_database.js"></script>
@@ -48,8 +52,10 @@
 		<script src="../js/presenter_splash.js"></script>
 
 		<script>
+		
+			animateSplash();
 
-			function initPage() {
+			function initPage() {		
 				setTexts();
 			
 				initComponents();

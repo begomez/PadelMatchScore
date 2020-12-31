@@ -2,6 +2,7 @@
 // Anim utils
 //////////////////////////////////////////////////////////////
 
+var SPLASH_IMG = "splash_img";
 var LOADER_CONTAINER = "loaderContainer";
 var LOADER_ICON = "loaderIcon";
 var LOADER_MSG = "loaderMsg";
@@ -10,10 +11,18 @@ var ID_BTN = "btnAction";
 
 var LOADING_TIME = 1500;
 
-function myPlayFunction() {
-    document.getElementById(LOADER_ICON).style.WebkitAnimationPlayState = "running"; // Code for Chrome, Safari, and Opera
-    document.getElementById(LOADER_ICON).style.animationPlayState = "running";
+function animateSplash() {
+    innerAnimate(SPLASH_IMG);
 }
+
+function myPlayFunction() {
+    innerAnimate(LOADER_ICON);
+}
+
+function innerAnimate(target) {
+    document.getElementById(target).style.WebkitAnimationPlayState = "running"; // Code for Chrome, Safari, and Opera
+    document.getElementById(target).style.animationPlayState = "running";	
+} 
 
 function myPauseFunction() {
     document.getElementById(LOADER_ICON).style.WebkitAnimationPlayState = "paused"; // Code for Chrome, Safari, and Opera

@@ -2,7 +2,7 @@
 // Functions used in finish.html
 //////////////////////////////////////////////////////////////
 var SUCCESS_MSG = LANG_JSON_DATA["finish_success"];
-var MAIN_SCORE_BOARD = "board";
+var MAIN_SCORE_BOARD = "content";
 
 function saveGameInDB() {
 	var widgetName = MAIN_SCORE_BOARD;

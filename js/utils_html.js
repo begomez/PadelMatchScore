@@ -26,6 +26,8 @@ var WIDGET_DIV = "DIV";
 var WIDGET_SPAN = "SPAN";
 var WIDGET_H1 = "H1";
 
+var HEADER = "header";
+var FOOTER = "footer";
 
 function readTextFromHTML(name) {
 	return window.document.getElementById(name).innerHTML;
@@ -155,6 +157,14 @@ function createHTMLWidget(type) {
 	return document.createElement(type);
 }
 
+function showFooter() {
+	showHTMLWidget(FOOTER);
+}
+
+function hideFooter() {
+	hideHTMLWidget(FOOTER);
+}
+
 function showHTMLWidget(ident) {
 	var widget = window.document.getElementById(ident);
 
@@ -168,7 +178,7 @@ function hideHTMLWidget(ident) {
 	var widget = window.document.getElementById(ident);
 
 	if (widget != null) {
-		widget.style.visibility = "hidden";
+		widget.style.visibility = "collapse";
 		widget.style.display = "none";
 	}
 }

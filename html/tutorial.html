@@ -20,9 +20,9 @@
 	<body onload="javascript:initPage();">
 		<div class="ui-page ui-page-active grad" id="tutorial">
 
-			<div class="ui-content content-padding">
+			<div id="content" class="ui-content content-padding">
 
-				<span id="btnSkip" class="floating" onclick="onSkipClick(page);" style="visibility: collapse;"></span>
+				<span id="btnSkip" class="floating" onclick="onSkipClick(page);"></span>
 
 				<div id="containerTutorial">
 
@@ -34,10 +34,6 @@
 
 			</div>
 			
-			<footer class="ui-footer ui-bottom-button">
-				<a id="btnAction" class="ui-btn" 
-				onclick="onContinueClick();"></a>
-			</footer>
 		</div>
 
 		<script src="../js/tizen_events.js"></script>

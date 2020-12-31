@@ -4,6 +4,8 @@
 
 var ID_TITLE = "mainTitle";
 var ID_SUBTITLE = "secondaryTitle";
+
+var ID_CONTAINER = "emptyContainer";
 var ID_EMPTY = "empty";
 var ID_BTN = "btnAction";
 
@@ -14,13 +16,13 @@ var OFFSET = 10;
 
 function setTexts() {
 	window.document.getElementById(ID_TITLE).innerHTML = LANG_JSON_DATA["option_history"];
-	window.document.getElementById(ID_SUBTITLE).innerHTML = LANG_JSON_DATA["option_history"];
+	//window.document.getElementById(ID_SUBTITLE).innerHTML = LANG_JSON_DATA["option_history"];
 	window.document.getElementById(ID_EMPTY).innerHTML = LANG_JSON_DATA["error_no_data"];
-	window.document.getElementById(ID_BTN).innerHTML = LANG_JSON_DATA["action_more"];
+	window.document.getElementById(ID_BTN).innerHTML = LANG_JSON_DATA["action_done"];
 }
 
 function hideEmptyList() {
-	hideHTMLWidget(ID_EMPTY);
+	hideHTMLWidget(ID_CONTAINER);
 }
 
 function createMainListItem() {
@@ -68,6 +70,14 @@ function createSummaryItem(summary) {
 	return content;
 }
 
+function getDataOrExit(widget) {
+	if (widget.innerHTML == LANG_JSON_DATA["action_more"]) {
+		getData();
+	} else {
+		onSkipClick();
+	}
+}
+
 function getData() {
 	var db = getRepository();
 
@@ -81,9 +91,12 @@ function getData() {
 			drawList(result);
 
 			PAGE++;
+			
+			window.document.getElementById(ID_BTN).innerHTML = LANG_JSON_DATA["action_more"];
+
 		},
 		function() {
-			//XXX: do nothing empty is already shown
+			//XXX: do nothing more empty is already shown
 		}
 	);
 }
@@ -103,4 +116,8 @@ function drawList(result) {
 		list.appendChild(item);
 	}
 	
+}
+
+function onSkipClick() {
+	window.location = "index.html";
 }
