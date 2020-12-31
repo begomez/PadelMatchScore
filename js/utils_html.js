@@ -16,8 +16,8 @@ var ID_SET2_HTML = "Set2";
 var ID_SET3_HTML = "Set3";
 
 var UNIT = 10;
-var LARGE = "xx-large";
-var LARGER = "larger";
+var LARGE = "large";
+var LARGER = "x-large";
 
 var WIDGET_BR = "BR";
 var WIDGET_LI = "LI";
