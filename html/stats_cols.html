@@ -20,7 +20,8 @@
 	
 	<body onload="javascript:initPage();">
 	
-		<div class="ui-page" id="stats">
+		<div class="ui-page" id="bar">
+		
 			<header id="header" class="ui-header">
 				<h2 id="secondaryTitle" class="ui-title"></h2>
 			</header>
@@ -29,20 +30,20 @@
 				<div class="ui-graph"
 					 id="graph"
 					 data-mode="continuous"
-					 data-graph="line"
-					 data-color="#0F0"
+					 data-graph="bar"
+					 data-color="#0000FF,#00FF00"
 					 data-xlabel="Number"
 					 data-ylabel="Value"
 					 data-xinit="0"
 					 data-yinit="0"
-					 data-axis-x-type="index"
-					 data-axis-x-max-count="10"
-					 data-axis-x-unit="s"
-					 data-value="[1,2,5]">
-				 </div>
-			</div><!-- /content -->
-		</div><!-- /page -->
+					 data-axis-x-type="order"
+					 data-axis-x-unit="s">
+			 	</div>
 
+			</div>
+			
+		</div><!-- /content -->
+	
 
 		<script src="../js/tizen_events.js"></script>
 
@@ -52,7 +53,7 @@
 
 		<script src="../js/utils_html.js"></script>
 		
-		<script src="../js/presenter_stats_graph.js"></script>
+		<script src="../js/presenter_stats_cols.js"></script>
 			
 		<script>
 	

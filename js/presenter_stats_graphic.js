@@ -8,7 +8,7 @@ var ID_SUBTITLE = "secondaryTitle";
 
 function setTexts() {
 	window.document.getElementById(ID_TITLE).innerHTML = LANG_JSON_DATA["app_name"];
-	//window.document.getElementById(ID_SUBTITLE).innerHTML = LANG_JSON_DATA["app_name"];
+	window.document.getElementById(ID_SUBTITLE).innerHTML = LANG_JSON_DATA["app_name"];
 }
 
 function initGraph() {
@@ -36,6 +36,4 @@ function initGraph() {
 		graphWidget.destroy();
 		marquee.destroy();
 	});
-	
-	console.log("Done!");
-}
+	}
