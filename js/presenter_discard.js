@@ -15,8 +15,10 @@ function setTexts() {
 */
 
 function discardGameFromStorage() {
+	var widgetName = "board";
+	
 	if (isPlaying()) {
-		startLoading();
+		startLoading(widgetName);
 
 		setTimeout(
 			function() {
@@ -24,7 +26,7 @@ function discardGameFromStorage() {
 
 				//drawDone(SUCCESS_MSG);
 
-				endLoading();
+				endLoading(widgetName);
 
 			}, 
 			LOADING_TIME

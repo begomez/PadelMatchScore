@@ -20,15 +20,16 @@ function myPauseFunction() {
     document.getElementById(LOADER_ICON).style.animationPlayState = "paused";
 }
 
-function startLoading() {
-	//hideHTMLWidget(ID_BTN);
-    //showHTMLWidget(LOADER_CONTAINER);
-    //myPlayFunction();
+function startLoading(widgetName) {
+	hideHTMLWidget(widgetName);
+    showHTMLWidget(LOADER_CONTAINER);
+    myPlayFunction();
 }
 
-function endLoading() {
-	//myPauseFunction();
-	//hideHTMLWidget(LOADER_CONTAINER);
+function endLoading(widgetName) {
+	myPauseFunction();
+	hideHTMLWidget(LOADER_CONTAINER);
+	showHTMLWidget(widgetName);	
 }
 
 

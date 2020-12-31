@@ -15,14 +15,16 @@ function setTexts() {
 */
 
 function saveGameInDB() {
+	var widgetName = "board";
+	
 	if (isPlaying()) {
 		prepareRepository();
 
-		startLoading();
+		startLoading(widgetName);
 
 		setTimeout(
 			function() {
-				fetchDBData();
+				fetchDBData(widgetName);
 			}, 
 			LOADING_TIME
 		);
@@ -31,15 +33,15 @@ function saveGameInDB() {
 	}
 }
 
-function fetchDBData() {
+function fetchDBData(widgetName) {
 	var db = getRepository();
 
 	fetchMaxMatchId(db, function(result) {
-		insertDBData(db, result);
+		insertDBData(db, result, widgetName);
 	});
 }
 
-function insertDBData(db, result) {
+function insertDBData(db, result, widgetName) {
 	insertLocalScore(db, result);
 	insertVisitorScore(db, result);
 	
@@ -50,7 +52,7 @@ function insertDBData(db, result) {
 
 	//drawDone(SUCCESS_MSG);
 
-	endLoading();
+	endLoading(widgetName);
 }
 
 function insertLocalScore(db, matchId) {

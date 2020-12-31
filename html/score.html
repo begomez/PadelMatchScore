@@ -10,6 +10,7 @@
 		<link rel="stylesheet" media="all and (-tizen-geometric-shape: circle)" href="../lib/tau/wearable/theme/default/tau.circle.min.css">
 
 		<link rel="stylesheet" href="../css/common.css">
+		<link rel="stylesheet" href="../css/common_anim.css">
 	    <link rel="stylesheet" href="../css/score.css">
 	    
 	    <script src="../js/tizen_circle_helper.js"></script>
@@ -19,8 +20,10 @@
 	<body onload="javascript:initPage();">
 
 		<div class="ui-page ui-page-active grad" id="score" >
+
+
 			
-			<div class="ui-content content-padding">
+			<div id="board" class="ui-content content-padding">
 		
         			<div id="local" class="container" onmouseover="javascript:onLocalSelected(this);">
 
@@ -107,8 +110,16 @@
 			  </div>
 		
 			</div>
+			
+			<div>
+				<div id="loaderContainer" class="centered">
+					<img id="loaderIcon" class="ball_animated" src="../images/yellow_ball.png" />
+				</div>
+			</div>
 		
 		</div>
+		
+
 
 
 		<script src="../js/tizen_battery.js"></script>
