@@ -24,10 +24,10 @@ LANG_JSON_DATA = {
 	"error_no_data" : "No stored matches",
 	"discard_success" : "Match discarded!",
 	"finish_success" : "Match saved!",
-	"tutorial_step1" : "When playing, use bezel to save or discard a match",
-	"tutorial_step2" : "Swipe horizontally to increase or decrease points score",
-	"tutorial_step3" : "Swipe vertically to increase or decrease games score",
-	"tutorial_step4" : "Save match results and check your statistics!",
+	"tutorial_step1" : "Swipe horizontally to increase or decrease points score",
+	"tutorial_step2" : "Swipe vertically to increase or decrease games score",
+	"tutorial_step3" : "When playing, use bezel to save or discard a match",
+	"tutorial_step4" : "Check match results and review your statistics!",
 	"confirm_save" : "Save\ncurrent match\nand finish?",
 	"confirm_discard" : "Discard\ncurrent match?"
 };
