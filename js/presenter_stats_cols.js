@@ -17,7 +17,7 @@ function initGraph () {
 		graphWidget,
 		data,
 		i,
-		numberOfBars = 7,
+		numberOfBars = 7,//XXX:
 		x,
 		y,
 		label;
@@ -34,6 +34,13 @@ function initGraph () {
 		}
 
 		label = "Series 2";
+		for (i = 0; i < numberOfBars; i++) {
+			x = i + 1;
+			y = Math.round(Math.random() * 20);
+			data.push({x: x, y: y, label: label});
+		}
+		
+		label = "Series 3";
 		for (i = 0; i < numberOfBars; i++) {
 			x = i + 1;
 			y = Math.round(Math.random() * 20);

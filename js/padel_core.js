@@ -266,6 +266,15 @@ function PadelMatchSummary(pid, ptime, psummary) {
     },
     this.toString = function() {
         return this.id + " " + this.time + " " + this.summary;
+    },
+    this.getGamesPerSet = function(setNumber) {
+		 var splitted = stringToArray(this.summary, " ");
+         //set1 set2 set3
+
+         return Number(splitted[setNumber - 1].substring(0, 1)); 
+    },
+    this.getGamesPerMatch = function() {    		
+    		 return this.getGamesPerSet(1) + this.getGamesPerSet(2) + this.getGamesPerSet(3);
     };
 }
 
