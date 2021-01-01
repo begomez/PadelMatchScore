@@ -6,7 +6,7 @@ var PAGE_TUT = "tutorial.html";
 var PAGE_GRAPH = "stats_graphic.html";
 var PAGE_BARS = "stats_cols.html";
 
-(function initNavigation() {
+(function() {
 	tau.defaults.pageTransition = "slideup";
 })();
 
@@ -43,5 +43,6 @@ function toBars() {
 }
 
 function navigateTo(target) {
-	tau.changeTo(target);
+	window.location = target;
+	//tau.loadPage(target);
 }

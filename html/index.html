@@ -28,31 +28,35 @@
 				<ul id="listContent" class="ui-listview">
 				
 		            <li class="li-has-thumb-left">
-		            	<div onclick="navigateTo('score.html');">
-    	                	<div class="img-icon play-icon ui-li-thumb-left"></div>
-    	                	<span id="item1"></span>
-	                	</div>
+  	    	                <div class="img-icon play-icon ui-li-thumb-left"></div>
+		            
+			            	<a onclick="javacript:toScore();">
+	    	                		<span id="item1"></span>
+		                	</a>
 		            </li>
 		           
 		            <li class="li-has-thumb-left">
-		            	<div onclick="navigateTo('list.html');">
-    	                	<div class="img-icon history-icon ui-li-thumb-left"></div>
-    	                	<span id="item4"></span>
-		            	</div>
+		            	    	<div class="img-icon history-icon ui-li-thumb-left"></div>
+		            
+			            	<a onclick="javascript:toResults();">
+	    	                		<span id="item4"></span>
+			            	</a>
 		            </li>
 		            
 		            <li class="li-has-thumb-left">
-		            	<div onclick="navigateTo('index_stats.html');">
-    	                	<div class="img-icon stats-icon ui-li-thumb-left"></div>
-    	                	<span id="item5"></span>
-		            	</div>
+		            	    <div class="img-icon stats-icon ui-li-thumb-left"></div>
+		            
+			            	<a onclick="javascript:toStats();">
+	    	                		<span id="item5"></span>
+			            	</a>
 		            </li>
 		            
 		            <li class="li-has-thumb-left">
-		            	<div onclick="navigateTo('tutorial.html');">
-    	                	<div class="img-icon tutorial-icon ui-li-thumb-left"></div>
-    	                	<span id="item6"></span>
-		            	</div>
+		            	    	<div class="img-icon tutorial-icon ui-li-thumb-left"></div>
+		            
+			            	<a onclick="javascript:toTutorial();">
+	    	                		<span id="item6"></span>
+			            	</a>
 		            </li>
 	         	</ul>
          	</div>
@@ -71,44 +75,36 @@
 
 		<script src="../js/utils_html.js"></script>
 
-		<script src="../js/presenter_index.js"></script>
+		<script src="../js/controller_index.js"></script>
 
 		<script>
-
-			function navigateTo(target) {
-				window.location = target;
-			}
 
 			function initPage() {
 				setTexts();
 			}
 			
+			var DELAY = 1000;
+			
 		    initBezel(
 		    		tau,
 		    		"main", 
 		    		function() {
-		    			var snapList = document.getElementById("listContent");
-			    		var snapListComponent = tau.widget.SnapListview(snapList);
-			    		var index = 0;
-			    		var selectedIndex = snapListComponent.getSelectedIndex();
+		    			var index = 0;
+			    		var selectedIndex = getSelectedIndexOnList("listContent");
 			    		if (selectedIndex !== null) {
 			    			index = selectedIndex;
 			    		}   
-				    console.log("index is " + index);			    
 			    		snapListComponent.scrollToPosition(++index);
 		    		},
 		    		function() {		
-		    			var snapList = document.getElementById("listContent");
-			    		var snapListComponent = tau.widget.SnapListview(snapList);
-			    		var index = 0;
-			    		var selectedIndex = snapListComponent.getSelectedIndex();
+		    			var index = 0;
+			    		var selectedIndex = getSelectedIndexOnList("listContent");		    			
 			    		if (selectedIndex !== null) {
 			    			index = selectedIndex;
 			    		}   
-				    console.log("index is " + index);			    
 			    		snapListComponent.scrollToPosition(--index);
 		    		},
-		    		1000
+		    		DELAY
 	    		);
 	</script>
 		
