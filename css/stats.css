@@ -2048,3 +2048,13 @@ input[type="checkbox"]#checkboxControl {
 	position: absolute;
 	visibility: hidden;
 }
+
+.ui-page {
+	align: center;
+	text-align: center;
+}
+
+#content {
+	padding: 0px 0px 0px 0px; 
+	margin: 0px 0px 0px 0px; 
+}
