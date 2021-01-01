@@ -2050,11 +2050,17 @@ input[type="checkbox"]#checkboxControl {
 }
 
 .ui-page {
+	position: absolute;
+	left: 5%;
+	top: 15%;
+	margin: 0 auto;
 	align: center;
 	text-align: center;
 }
 
 #content {
+	width: 95%;
+	height: 95%;
 	padding: 0px 0px 0px 0px; 
 	margin: 0px 0px 0px 0px; 
 }
