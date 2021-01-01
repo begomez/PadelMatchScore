@@ -142,10 +142,10 @@
 
 		<script src="../js/padel_core.js"></script>	
 
-		<script src="../js/presenter_score.js"></script>	
-		<script src="../js/presenter_operation.js"></script>
-		<script src="../js/presenter_finish.js"></script>	
-		<script src="../js/presenter_discard.js"></script>	
+		<script src="../js/controller_score.js"></script>	
+		<script src="../js/controller_game_manage.js"></script>
+		<script src="../js/controller_game_save.js"></script>	
+		<script src="../js/controller_game_discard.js"></script>	
 		
 		<script src="../js/jquery-1.11.3.min.js"></script>
 
@@ -174,7 +174,9 @@
 				}			
 			}
 			
-			 initBezel(
+			var DELAY = 3000;
+			
+			initBezel(
 		    		tau,
 		    		"score", 
 		    		function() {
@@ -189,7 +191,7 @@
 		    				onDiscardBtnClick();
 		    			}
 		    		},
-		    		3000
+		    		DELAY
 	    		);
 			
 	  	</script> 

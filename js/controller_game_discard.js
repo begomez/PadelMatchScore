@@ -1,8 +1,9 @@
 //////////////////////////////////////////////////////////////
-// Functions used in discard.html
+// Logic for discarding a game
 //////////////////////////////////////////////////////////////
+
+
 var SUCCESS_MSG = LANG_JSON_DATA["discard_success"];
-var MAIN_SCORE_BOARD = "content";
 
 function discardGameFromStorage() {
 	var widgetName = MAIN_SCORE_BOARD;
@@ -14,16 +15,13 @@ function discardGameFromStorage() {
 			function() {
 				resetMatchInStorage();
 
-				//drawDone(SUCCESS_MSG);
-
 				endLoading(widgetName);
-
+				
+				navigateBack();
+				
 			}, 
 			LOADING_TIME
 		);
-		
-	} else {
-
 	}
 }
 

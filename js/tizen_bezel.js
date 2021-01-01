@@ -51,9 +51,3 @@ function initBezel(tau, ident, toRight, toLeft, delay) {
         }, false);
     }, false);
 }
-
-function getSelectedIndexOnList(widgetName) {
-	var snapList = document.getElementById(widgetName);
-	var snapListComponent = tau.widget.SnapListview(snapList);
-	return snapListComponent.getSelectedIndex();
-}

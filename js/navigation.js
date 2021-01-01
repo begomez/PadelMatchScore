@@ -6,12 +6,16 @@ var PAGE_TUT = "tutorial.html";
 var PAGE_GRAPH = "stats_graphic.html";
 var PAGE_BARS = "stats_cols.html";
 
+var BACK_DELAY = 500;
+
 (function() {
 	tau.defaults.pageTransition = "slideup";
 })();
 
 function navigateBack() {
-	tau.back();
+	setTimeout(function(){
+		tau.back();		
+	}, BACK_DELAY);
 }
 
 function toIndex() {

@@ -1,6 +1,8 @@
 //////////////////////////////////////////////////////////////
-// Functions used in finish.html
+// Common logic for game management
 //////////////////////////////////////////////////////////////
+
+var MAIN_SCORE_BOARD = "content";
 
 var VIEW_TITLE_ID = "mainTitle";
 var VIEW_SUBTITLE_ID = "secondaryTitle";
@@ -11,6 +13,18 @@ var VIEW_SCORE_ID = "currentResult";
 var VIEW_BTN_ID = "btnAction";
 var VIEW_MSG_ID = "empty";
 
+
+function onDiscardBtnClick() {
+	logMessage("DISCARD GAME");
+	
+	discardGameFromStorage();
+}
+
+function onSaveBtnClick() {
+	logMessage("SAVE GAME");
+	
+	saveGameInDB();
+}
 
 function isPlaying() {
 	return readPlayingMatchFromStorage() == VALUE_TRUE;

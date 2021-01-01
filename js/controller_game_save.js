@@ -1,8 +1,9 @@
 //////////////////////////////////////////////////////////////
-// Functions used in finish.html
+// Logic for saving a game
 //////////////////////////////////////////////////////////////
+
+
 var SUCCESS_MSG = LANG_JSON_DATA["finish_success"];
-var MAIN_SCORE_BOARD = "content";
 
 function saveGameInDB() {
 	var widgetName = MAIN_SCORE_BOARD;
@@ -18,8 +19,6 @@ function saveGameInDB() {
 			}, 
 			LOADING_TIME
 		);
-	} else {
-		//XXX: do nothing empty is already shown
 	}
 }
 
@@ -40,9 +39,9 @@ function insertDBData(db, result, widgetName) {
 
 	resetMatchInStorage();
 
-	//drawDone(SUCCESS_MSG);
-
 	endLoading(widgetName);
+	
+	navigateBack();
 }
 
 function insertLocalScore(db, matchId) {

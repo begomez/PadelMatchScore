@@ -90,7 +90,9 @@
 		    		"main", 
 		    		function() {
 		    			var index = 0;
-			    		var selectedIndex = getSelectedIndexOnList("listContent");
+					var snapList = document.getElementById("listContent");
+					var snapListComponent = tau.widget.SnapListview(snapList);
+					var selectedIndex = snapListComponent.getSelectedIndex();
 			    		if (selectedIndex !== null) {
 			    			index = selectedIndex;
 			    		}   
@@ -98,15 +100,18 @@
 		    		},
 		    		function() {		
 		    			var index = 0;
-			    		var selectedIndex = getSelectedIndexOnList("listContent");		    			
-			    		if (selectedIndex !== null) {
+					var snapList = document.getElementById("listContent");
+					var snapListComponent = tau.widget.SnapListview(snapList);
+					var selectedIndex = snapListComponent.getSelectedIndex();			    		
+					if (selectedIndex !== null) {
 			    			index = selectedIndex;
 			    		}   
 			    		snapListComponent.scrollToPosition(--index);
 		    		},
 		    		DELAY
 	    		);
-	</script>
+		</script>
 		
 	</body>
+	
 </html>

@@ -39,7 +39,6 @@ function setTexts() {
     window.document.getElementById(ID_SET_FIRST).innerHTML = LANG_JSON_DATA["str_set1"];
     window.document.getElementById(ID_SET_SECOND).innerHTML = LANG_JSON_DATA["str_set2"];
     window.document.getElementById(ID_SET_THIRD).innerHTML = LANG_JSON_DATA["str_set3"];
-
 }
 
 function dump() {
@@ -267,16 +266,4 @@ function onVisitorSelected(obj) {
     resizeElement(CONTENT_LOCAL_NAME, CONTENT_VISITOR_NAME, obj.id);        
 
     scoreCurrent = scoreVisitor;  
-}
-
-function onDiscardBtnClick() {
-	console.log("DISCARDING");
-	
-	discardGameFromStorage();
-}
-
-function onSaveBtnClick() {
-	console.log("SAVING");
-	
-	saveGameInDB();
 }
