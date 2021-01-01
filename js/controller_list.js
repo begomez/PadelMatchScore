@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////
-// Functions used in list.html
+// Logic for view "list.html"
 //////////////////////////////////////////////////////////////
 
 var ID_TITLE = "mainTitle";
@@ -12,7 +12,7 @@ var ID_BTN = "btnAction";
 var TARGET = "matchesList";
 
 var PAGE = 1;
-var OFFSET = 10;
+var OFFSET = 2;
 
 function setTexts() {
 	window.document.getElementById(ID_TITLE).innerHTML = LANG_JSON_DATA["option_history"];
@@ -74,7 +74,7 @@ function getDataOrExit(widget) {
 	if (widget.innerHTML == LANG_JSON_DATA["action_more"]) {
 		getData();
 	} else {
-		onSkipClick();
+		navigateBack();
 	}
 }
 
@@ -115,9 +115,4 @@ function drawList(result) {
 
 		list.appendChild(item);
 	}
-	
-}
-
-function onSkipClick() {
-	window.location = "index.html";
 }

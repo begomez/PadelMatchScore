@@ -60,7 +60,7 @@
 		
 		<script src="../js/padel_core.js"></script>
 		
-		<script src="../js/presenter_list.js"></script>
+		<script src="../js/controller_list.js"></script>
 
 		<script>
 
@@ -71,6 +71,8 @@
 
 				getData();
 			}
+			
+			var DELAY = 1000;
 			
 			initBezel(
 		    		tau,
@@ -97,7 +99,7 @@
 				    console.log("index is " + index);			    
 			    		snapListComponent.scrollToPosition(--index);
 		    		},
-		    		1000
+		    		DELAY
 	    		);
 
 		</script>

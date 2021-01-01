@@ -1,8 +1,16 @@
 //////////////////////////////////////////////////////////////
-// Functions used in <xxx_stats>.html
+// Common logic for data visualization views
 //////////////////////////////////////////////////////////////
 var PAGE = 1;
 var OFFSET = 10;
+
+var ID_TITLE = "mainTitle";
+var ID_SUBTITLE = "secondaryTitle";
+
+function setTexts() {
+	window.document.getElementById(ID_TITLE).innerHTML = LANG_JSON_DATA["app_name"];
+	window.document.getElementById(ID_SUBTITLE).innerHTML = LANG_JSON_DATA["app_name"];
+}
 
 function retrieveData() {
 	fetchFromDB();
