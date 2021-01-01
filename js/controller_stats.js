@@ -11,8 +11,6 @@ var ID_CONTAINER = "emptyContainer";
 var ID_OPTIONS = "listContent";
 var ID_EMPTY = "empty";
 
-var data;
-
 function retrieveData() {
 	fetchFromDB();
 }
@@ -28,7 +26,7 @@ function fetchFromDB() {
 			showHeader();
 			hideEmptyList();
 			
-			data = result;
+			writeSumariesInStorage(result);
 			
 			dumpData(result)
 
@@ -50,10 +48,32 @@ function hideOptions() {
 
 function dumpData(result) {
 	for (var i = 0; i < result.length; i++) {
-		console.log(result[i].getSummary());
-		console.log(result[i].getGamesPerSet(1));
-		console.log(result[i].getGamesPerSet(2));
-		console.log(result[i].getGamesPerSet(3));
-		console.log(result[i].getGamesPerMatch());
+		logMessage(result[i].getSummary());
+		logMessage(result[i].getGamesPerSet(1));
+		logMessage(result[i].getGamesPerSet(2));
+		logMessage(result[i].getGamesPerSet(3));
+		logMessage(result[i].getGamesPerMatch());
 	}
+}
+
+function fromStorageToObj(storage) {
+	logMessage(storage);
+	
+	var strMatches = stringToArray(storage, ",");
+	
+	var matches = Array();
+	
+	for (i = 0; i < strMatches.length; i++) {
+		var parts = stringToArray(strMatches[i], "/");
+		
+		logMessage(parts);
+		
+		var match = new PadelMatchSummary(parts[0], parts[1], parts[2]);
+		
+		logMessage(match.toString());
+		
+		matches.push(match);
+	}
+	
+	return matches;
 }

@@ -6,6 +6,7 @@ var KEY_IN_PLAY = "key_in_play";
 var KEY_SCORE_LOCAL = "key_score_local";
 var KEY_SCORE_VISITOR = "key_score_visitor";
 var KEY_TIMESTAMP = "key_timestamp";
+var KEY_MATCH_SUMARIES = "key_sumaries";
 
 var VALUE_DEFAULT = "0,0,0,0,0";
 var VALUE_UNDEFINED = "undefined";
@@ -46,6 +47,14 @@ function writePlayingMatchInStorage() {
 
 function readPlayingMatchFromStorage() {
 	return getLocalStorage().getItem(KEY_IN_PLAY);
+}
+
+function writeSumariesInStorage(result) {
+	getLocalStorage().setItem(KEY_MATCH_SUMARIES, result);
+}
+
+function readSumariesFromStorage() {
+	return getLocalStorage().getItem(KEY_MATCH_SUMARIES);
 }
 
 function initStorage() {

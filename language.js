@@ -32,7 +32,9 @@ LANG_JSON_DATA = {
 	"confirm_save" : "Save\ncurrent match\nand finish?",
 	"confirm_discard" : "Discard\ncurrent match?",
 	"stats_x" : "Matches",
-	"stats_y" : "Sets"
+	"stats_y" : "Sets",
+	"stats_local" : "Local",
+	"stats_visitor" : "Visitor"
 };
 
 

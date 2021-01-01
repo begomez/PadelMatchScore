@@ -28,9 +28,9 @@
 					 id="graph"
 					 data-mode="continuous"
 					 data-graph="bar"
-					 data-color="#0000FF,#00FF00, #FF0000"
-					 data-xlabel="GamesPerSet"
-					 data-ylabel="Matches"
+		 			 data-color="#FF0000,#00FF00"
+					 data-xlabel="Matches"
+					 data-ylabel="GamesPerMatch"
 					 data-xinit="0"
 					 data-yinit="0"
 					 data-axis-x-type="order"
@@ -57,6 +57,8 @@
 		<script src="../js/utils_common.js"></script>
 		
 		<script src="../js/padel_database.js"></script>
+		
+		<script src="../js/padel_storage.js"></script>
 				
 		<script src="../js/padel_core.js"></script>
 		
@@ -70,9 +72,7 @@
 			}
 			
 			initGraph();
-			
-			retrieveData();
-			
+						
 		</script>
 			
 	</body>

@@ -8,6 +8,12 @@ function setTexts() {
 }
 
 function initGraph() {
+	var stored = readSumariesFromStorage();
+	console.log(stored);
+	var matches = fromStorageToObj(stored);
+	dumpData(matches);
+
+	
 	var page = document.getElementById("stats"),
 		graphEl = document.getElementById("graph"),
 		titleMarquee = page.querySelector("header"),
@@ -16,6 +22,8 @@ function initGraph() {
 
 	page.addEventListener("pagebeforeshow", function () {
 		graphWidget = tau.widget.Graph(graphEl);
+		
+		//graphWidget.data.value("[10,12,15]");
 	});
 	
 	page.addEventListener("pageshow", function () {
