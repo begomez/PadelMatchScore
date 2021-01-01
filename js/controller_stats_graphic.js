@@ -23,7 +23,11 @@ function initGraph() {
 	page.addEventListener("pagebeforeshow", function () {
 		graphWidget = tau.widget.Graph(graphEl);
 		
-		//graphWidget.data.value("[10,12,15]");
+		for (i = 0; i < matches.length(); i++) {
+			graphWidget.value(matches[i].getLocalGamesPerSet(1));
+			graphWidget.value(matches[i].getLocalGamesPerSet(2));
+			graphWidget.value(matches[i].getLocalGamesPerSet(3));
+		}
 	});
 	
 	page.addEventListener("pageshow", function () {
