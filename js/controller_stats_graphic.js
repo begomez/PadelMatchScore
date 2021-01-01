@@ -9,7 +9,6 @@ function setTexts() {
 
 function initGraph() {
 	var stored = readSumariesFromStorage();
-	console.log(stored);
 	var matches = fromStorageToObj(stored);
 	dumpData(matches);
 
