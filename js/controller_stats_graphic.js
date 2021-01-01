@@ -22,8 +22,8 @@ function initGraph() {
 
 	page.addEventListener("pagebeforeshow", function () {
 		graphWidget = tau.widget.Graph(graphEl);
-		
-		for (i = 0; i < matches.length(); i++) {
+			
+		for (i = 0; i < matches.length; i++) {
 			graphWidget.value(matches[i].getLocalGamesPerSet(1));
 			graphWidget.value(matches[i].getLocalGamesPerSet(2));
 			graphWidget.value(matches[i].getLocalGamesPerSet(3));
@@ -44,17 +44,4 @@ function initGraph() {
 		graphWidget.destroy();
 		marquee.destroy();
 	});
-}
-
-function prepareDataForGraph(result) {
-	var gamesPerMatch = Array();
-
-	for (var i = 0; i < result.length; i++) {
-		
-		console.log(result[i].getGamesPerMatch());
-		
-		gamesPerMatch.add(result[i].getGamesPerMatch());
-	}
-	
-	return gamesPerMatch;
 }
