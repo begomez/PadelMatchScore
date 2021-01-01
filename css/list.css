@@ -8,11 +8,6 @@
     font-family: Verdana, Lucida Sans, Arial, Helvetica, sans-serif;
 }
 
-.play-icon:before
-{
-   -webkit-mask-image: url(../images/ico_ball.png); 
-}
-
 span {
 	display: block;
 }

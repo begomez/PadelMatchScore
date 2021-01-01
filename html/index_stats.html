@@ -25,6 +25,12 @@
 			</header>
 			
 			<div id="content" class="ui-content content-padding">
+				
+				<div id="emptyContainer" style="text-align: center;">
+		        		<img src="../images/tennis_ball_with_shadow.png">
+					<p id="empty" style=text-align: center; font-style: italic;""></p>
+				</div>
+				
 				<ul id="listContent" class="ui-listview">
 		            
 		            <li class="li-has-thumb-left">
@@ -44,6 +50,7 @@
 			            	</a>
 		            </li>
 	         	</ul>
+	         	
          	</div>
 		</div>
 
@@ -58,6 +65,15 @@
 
 		<script src="../js/utils_html.js"></script>
 
+		<script src="../js/utils_logger.js"></script>
+
+		<script src="../js/utils_common.js"></script>
+		
+		<script src="../js/padel_database.js"></script>
+				
+		<script src="../js/padel_core.js"></script>
+		
+		<script src="../js/controller_stats.js"></script>
 		<script src="../js/controller_index_stats.js"></script>
 
 		<script>
@@ -65,6 +81,8 @@
 			function initPage() {
 				setTexts();
 			}
+			
+			retrieveData();
 			
 		</script>
 		

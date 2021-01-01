@@ -2,6 +2,10 @@
 // Logic for view "stats_graphic.html"
 //////////////////////////////////////////////////////////////
 
+function setTexts() {
+	window.document.getElementById(ID_TITLE).innerHTML = LANG_JSON_DATA["app_name"];
+	window.document.getElementById(ID_SUBTITLE).innerHTML = LANG_JSON_DATA["app_name"];
+}
 
 function initGraph() {
 	var page = document.getElementById("stats"),
@@ -28,4 +32,17 @@ function initGraph() {
 		graphWidget.destroy();
 		marquee.destroy();
 	});
+}
+
+function prepareDataForGraph(result) {
+	var gamesPerMatch = Array();
+
+	for (var i = 0; i < result.length; i++) {
+		
+		console.log(result[i].getGamesPerMatch());
+		
+		gamesPerMatch.add(result[i].getGamesPerMatch());
 	}
+	
+	return gamesPerMatch;
+}

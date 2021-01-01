@@ -13,4 +13,6 @@ function setTexts() {
 	window.document.getElementById(ID_SUBTITLE).innerHTML = LANG_JSON_DATA["option_stats"];
 	window.document.getElementById(ID_ITEM_1).innerHTML = LANG_JSON_DATA["option_stats_static"];
 	window.document.getElementById(ID_ITEM_2).innerHTML = LANG_JSON_DATA["option_stats_bar"];
+	window.document.getElementById(ID_EMPTY).innerHTML = LANG_JSON_DATA["error_no_data"];
+
 }

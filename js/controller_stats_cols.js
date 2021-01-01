@@ -2,6 +2,10 @@
 // Logic for view "stats_cols.html"
 //////////////////////////////////////////////////////////////
 
+function setTexts() {
+	window.document.getElementById(ID_TITLE).innerHTML = LANG_JSON_DATA["app_name"];
+	window.document.getElementById(ID_SUBTITLE).innerHTML = LANG_JSON_DATA["app_name"];
+}
 
 function initGraph () {
 	var page = document.getElementById("bar"),
@@ -41,4 +45,16 @@ function initGraph () {
 
 		graphWidget.value(data);
 	});
-};
+}
+
+function prepareDataForBars(result) {
+	var gamesSet1 = Array();
+	var gamesSet2 = Array();
+	var gamesSet3 = Array();
+
+	for (var i = 0; i < result.length; i++) {		
+		gamesSet1.add(result[i].getGamesPerSet(1));
+		gamesSet2.add(result[i].getGamesPerSet(2));
+		gamesSet3.add(result[i].getGamesPerSet(3));
+	}
+}

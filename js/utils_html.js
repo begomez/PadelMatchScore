@@ -165,6 +165,14 @@ function hideFooter() {
 	hideHTMLWidget(FOOTER);
 }
 
+function showHeader() {
+	showHTMLWidget(HEADER);
+}
+
+function hideHeader() {
+	hideHTMLWidget(HEADER);
+}
+
 function showHTMLWidget(ident) {
 	var widget = window.document.getElementById(ident);
 
