@@ -13,7 +13,7 @@
 				} catch (ignore) {
 				}
 			} else {
-				window.history.back();
+				navigateBack();
 			}
 		} else {
 			console.log(ev.keyName);
