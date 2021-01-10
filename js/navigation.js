@@ -9,12 +9,12 @@ var PAGE_BARS = "stats_cols.html";
 var BACK_DELAY = 500;
 
 (function() {
-	tau.defaults.pageTransition = "slideup";
+	//tau.defaults.pageTransition = "slideup";
 })();
 
 function navigateBack() {
 	setTimeout(function(){
-		tau.back();		
+		window.history.back();
 	}, BACK_DELAY);
 }
 
@@ -48,5 +48,4 @@ function toBars() {
 
 function navigateTo(target) {
 	window.location = target;
-	//tau.loadPage(target);
 }

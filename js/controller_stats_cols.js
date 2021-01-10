@@ -43,4 +43,8 @@ function initGraph () {
 		
 		graphWidget.value(data);
 	});
+	
+	page.addEventListener("pagebeforehide", function () {
+		graphWidget.destroy();
+	});
 }
