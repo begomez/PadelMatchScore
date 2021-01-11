@@ -93,22 +93,30 @@
 		    		function() {
 		    			var index = 0;
 					var snapList = document.getElementById("listContent");
-					var snapListComponent = tau.widget.SnapListview(snapList);
-					var selectedIndex = snapListComponent.getSelectedIndex();
-			    		if (selectedIndex !== null) {
-			    			index = selectedIndex;
-			    		}   
-			    		snapListComponent.scrollToPosition(++index);
+					if (snapList !== null) {
+						var snapListComponent = tau.widget.SnapListview(snapList);
+						if (snapListComponent !== null) {
+							var selectedIndex = snapListComponent.getSelectedIndex();
+					    		if (selectedIndex !== null) {
+					    			index = selectedIndex;
+					    		}   
+					    		snapListComponent.scrollToPosition(++index);
+						}
+					}
 		    		},
 		    		function() {		
 		    			var index = 0;
 					var snapList = document.getElementById("listContent");
-					var snapListComponent = tau.widget.SnapListview(snapList);
-					var selectedIndex = snapListComponent.getSelectedIndex();			    		
-					if (selectedIndex !== null) {
-			    			index = selectedIndex;
-			    		}   
-			    		snapListComponent.scrollToPosition(--index);
+					if (snapList !== null) {
+						var snapListComponent = tau.widget.SnapListview(snapList);
+						if (snapListComponent !== null) {
+							var selectedIndex = snapListComponent.getSelectedIndex();			    		
+							if (selectedIndex !== null) {
+					    			index = selectedIndex;
+					    		}   
+					    		snapListComponent.scrollToPosition(--index);
+						}
+					}
 		    		},
 		    		DELAY
 	    		);

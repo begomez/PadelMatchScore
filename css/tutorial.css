@@ -15,7 +15,10 @@
 }
 
 #containerTutorial {
-
+	position: absolute;
+	margin: 0 auto;
+	top: 5%;
+	left: 5%;
 }
 
 #imgTutorial {
@@ -31,4 +34,5 @@
 	font-style: italic;
 	font-size: 0.85em;
 }
+
 

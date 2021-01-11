@@ -20,19 +20,22 @@
 	<body onload="">
 		<div class="ui-page grad" id="tutorial">
 
-			<div id="content" class="ui-content content-padding">
-
-				<span id="btnSkip" class="floating" onclick="onSkipClick(page);"></span>
+			<div id="content" class="ui-content">
 
 				<div id="containerTutorial">
 
 					<img id="imgTutorial" src="" />
 
+					<p id="msgTutorial"></p>	
+
 				</div>
 
-				<p id="msgTutorial"></p>	
-
 			</div>
+			
+			<footer class="ui-footer ui-bottom-button">
+				<a id="btnAction" class="ui-btn" onclick="navigateBack();"></a>
+			</footer>
+			
 			
 		</div>
 
