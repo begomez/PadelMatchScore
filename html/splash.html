@@ -19,7 +19,7 @@
 		<script src="../lib/tau/wearable/js/tau.js"></script>
 	</head>
 	
-	<body onload="javascript:initPage();">
+	<body onload="">
 		<div class="ui-page grad" id="splash">
 			<div id="content" class="ui-content content-padding">
 					
@@ -54,14 +54,16 @@
 		<script src="../js/controller_splash.js"></script>
 
 		<script>
-		
-			animateSplash();
 
 			function initPage() {		
 				setTexts();
 			
 				initComponents();
 			}
+					
+			initPage();
+			
+			animateSplash();
 
 		</script>	
 

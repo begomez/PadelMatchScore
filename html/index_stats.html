@@ -17,7 +17,7 @@
 		<script src="../lib/tau/wearable/js/tau.js"></script>
 	</head>
 
-	<body onload="javascript:initPage();">
+	<body onload="">
 		<div class="ui-page grad" id="mainStats">
 		
 			<header id="header" class="ui-header">
@@ -83,6 +83,8 @@
 			function initPage() {
 				setTexts();
 			}
+			
+			initPage();
 			
 			retrieveData();
 			

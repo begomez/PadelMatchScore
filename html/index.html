@@ -17,7 +17,7 @@
 		<script src="../lib/tau/wearable/js/tau.js"></script>
 	</head>
 
-	<body onload="javascript:initPage();">
+	<body onload="">
 		<div class="ui-page ui-page-active grad" id="main">
 		
 			<header id="header" class="ui-header">
@@ -78,12 +78,14 @@
 		<script src="../js/controller_index.js"></script>
 
 		<script>
-
+		
 			function initPage() {
 				setTexts();
 			}
 			
 			var DELAY = 1000;
+			
+			initPage();
 			
 		    initBezel(
 		    		tau,
