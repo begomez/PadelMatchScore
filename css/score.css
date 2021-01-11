@@ -131,4 +131,12 @@ td.l {
 td.v{
 	
 }
+
+#content {
+	position: absolute;	
+	width: 80%;
+	height: 80%;
+	top: 10%;
+	left: 10%;
+}
     
