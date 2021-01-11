@@ -17,19 +17,20 @@
 		<script src="../lib/tau/wearable/js/tau.js"></script>
 	</head>
 
-	<body onload="">
+	<body onload="initPage();">
 		<div class="ui-page grad" id="list">
 			
-			<div id="content" class="ui-content content-padding">	        		
-			
-				<div id="emptyContainer">
+			<div id="content" class="ui-content content-padding">      		
+				         	 	
+	         	 <div id="emptyContainer" style="text-align: center;">
 		        		<img src="../images/tennis_ball_with_shadow.png">
-					<p id="empty"></p>
+					<p id="empty" style="text-align: center; font-style: italic;"></p>
 				</div>
- 			
-				<ul id="matchesList" class="ui-listview">
+	        
+	        		<ul id="matchesList" class="ui-listview">
+					<li style="display: none; visibility: hidden;"></li>
 	         	</ul>
-
+	         	
 			</div>
 
 			<footer id="footer" class="ui-footer ui-bottom-button">
@@ -69,41 +70,47 @@
 
 				prepareRepository();
 
-				getData();
+				getData();	
 			}
 			
-			var DELAY = 1000;
-			
 			initPage();
+			
+			var DELAY = 1000;
 			
 			initBezel(
 		    		tau,
 		    		"list", 
 		    		function() {
-		    			var snapList = document.getElementById("matchesList");
-			    		var snapListComponent = tau.widget.SnapListview(snapList);
-			    		var index = 0;
-			    		var selectedIndex = snapListComponent.getSelectedIndex();
-			    		if (selectedIndex !== null) {
-			    			index = selectedIndex;
-			    		}   
-				    console.log("index is " + index);			    
-			    		snapListComponent.scrollToPosition(++index);
+		    			var index = 0;
+					var snapList = document.getElementById("matchesList");
+					if (snapList !== null) {
+						var snapListComponent = tau.widget.SnapListview(snapList);
+						if (snapListComponent !== null) {
+							var selectedIndex = snapListComponent.getSelectedIndex();
+					    		if (selectedIndex !== null) {
+					    			index = selectedIndex;
+					    		}   
+					    		snapListComponent.scrollToPosition(++index);
+						}
+					}
 		    		},
 		    		function() {		
-		    			var snapList = document.getElementById("matchesList");
-			    		var snapListComponent = tau.widget.SnapListview(snapList);
-			    		var index = 0;
-			    		var selectedIndex = snapListComponent.getSelectedIndex();
-			    		if (selectedIndex !== null) {
-			    			index = selectedIndex;
-			    		}   
-				    console.log("index is " + index);			    
-			    		snapListComponent.scrollToPosition(--index);
+		    			var index = 0;
+					var snapList = document.getElementById("matchesList");
+					if (snapList !== null) {
+						var snapListComponent = tau.widget.SnapListview(snapList);
+						if (snapListComponent !== null) {
+							var selectedIndex = snapListComponent.getSelectedIndex();			    		
+							if (selectedIndex !== null) {
+					    			index = selectedIndex;
+					    		} 
+						}  
+				    		snapListComponent.scrollToPosition(--index);
+			    		}
 		    		},
 		    		DELAY
 	    		);
-
+	    		 		
 		</script>
 
 	</body>
