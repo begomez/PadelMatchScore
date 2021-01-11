@@ -32,19 +32,23 @@ function configPage(page) {
 		case FIRST_PAGE:
 			window.document.getElementById(ID_MSG).innerHTML = LANG_JSON_DATA["tutorial_step1"];
 			loadImage(ID_IMG, "../images/" + IMG_STEP_1);
+			hideFooter();
 			break;
 		case SECOND_PAGE:
 			window.document.getElementById(ID_MSG).innerHTML = LANG_JSON_DATA["tutorial_step2"];
 			loadImage(ID_IMG, "../images/" + IMG_STEP_2);
+			hideFooter();
 			break;
 		case THIRD_PAGE:
 			window.document.getElementById(ID_MSG).innerHTML = LANG_JSON_DATA["tutorial_step3"];
 			loadImage(ID_IMG, "../images/"+ IMG_STEP_3);
+			hideFooter();
 			break;
 		case FOURTH_PAGE:
 			window.document.getElementById(ID_MSG).innerHTML = LANG_JSON_DATA["tutorial_step4"];
 			window.document.getElementById(ID_BTN).innerHTML = LANG_JSON_DATA["action_done"];
 			loadImage(ID_IMG, "../images/"+ IMG_STEP_4);
+			showFooter();
 			break;
 		default:
 			onSkipClick();
