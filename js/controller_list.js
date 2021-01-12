@@ -18,10 +18,6 @@ function setTexts() {
 	window.document.getElementById(ID_BTN).innerHTML = LANG_JSON_DATA["action_more"];
 }
 
-function hideEmptyList() {
-	hideHTMLWidget(ID_CONTAINER);
-}
-
 function createMainListItem() {
 	var item = createHTMLItemList();
 
@@ -75,8 +71,6 @@ function getData() {
 		PAGE,
 		PAGE * OFFSET, 
 		function(result) {
-			hideEmptyList();
-
 			drawList(result);
 
 			PAGE++;
