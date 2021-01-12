@@ -9,7 +9,7 @@ var IMG_STEP_4 = "tut_step_4.png";
 
 var ID_IMG = "imgTutorial";
 var ID_MSG = "msgTutorial";
-var ID_BTN = "btnSkip";
+var ID_BTN = "btnAction";
 
 var FIRST_PAGE = 1;
 var SECOND_PAGE = 2;

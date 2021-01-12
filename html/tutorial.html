@@ -17,7 +17,7 @@
 		<script src="../lib/tau/wearable/js/tau.graph.js"></script>		
 	</head>
 
-	<body onload="">
+	<body onload="initPage();">
 		<div class="ui-page grad" id="tutorial">
 
 			<div id="content" class="ui-content">
@@ -32,7 +32,7 @@
 
 			</div>
 			
-			<footer class="ui-footer ui-bottom-button">
+			<footer class="ui-footer ui-bottom-button" style="display: none; visibility: collapse;">
 				<a id="btnAction" class="ui-btn" onclick="navigateBack();"></a>
 			</footer>
 			
@@ -69,9 +69,7 @@
 				page++;
 				configPage(page);
 			}
-			
-			initPage();
-			
+						
 		    initBezel(
 		    		tau,
 		    		"tutorial", 
