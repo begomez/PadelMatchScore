@@ -35,7 +35,7 @@
 
 			</div>
 			
-			<footer class="ui-footer ui-bottom-button" style="display: none; visibility: collapse;">
+			<footer id="footer" class="ui-footer ui-bottom-button">
 				<a id="btnAction" class="ui-btn" onclick="navigateBack();"></a>
 			</footer>
 			
@@ -80,7 +80,7 @@
 					configPage(page);
 		    		},
 		    		function() {		
-		    			if (page > 0) {
+		    			if (page > 1) {
 			    			--page;		    			
 		    			}
 					configPage(page);
