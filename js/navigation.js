@@ -5,6 +5,7 @@ var PAGE_STATS = "index_stats.html";
 var PAGE_TUT = "tutorial.html";
 var PAGE_GRAPH = "stats_graphic.html";
 var PAGE_BARS = "stats_cols.html";
+var PAGE_EMPTY = "empty.html";
 
 var BACK_DELAY = 500;
 
@@ -16,6 +17,10 @@ function navigateBack() {
 	setTimeout(function(){
 		window.history.back();
 	}, BACK_DELAY);
+}
+
+function toEmpty() {
+	navigateTo(PAGE_EMPTY);
 }
 
 function toIndex() {

@@ -52,3 +52,14 @@ body {
 #btnAction {
     font-weight: bold;
 }
+
+#emptyContainer {
+	position: absolute;
+	top: 10%;
+	left: 15%;
+	margin: 0 auto;
+}
+
+#empty {
+	text-style: italic;
+}

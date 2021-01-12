@@ -17,26 +17,18 @@
 		<script src="../lib/tau/wearable/js/tau.js"></script>
 	</head>
 
-	<body onload="initPage();">
+	<body onload="">
 		<div class="ui-page grad" id="list">
 			
 			<div id="content" class="ui-content content-padding">      		
 				         	 	
-	         	 <div id="emptyContainer" style="text-align: center;">
-		        		<img src="../images/tennis_ball_with_shadow.png">
-					<p id="empty" style="text-align: center; font-style: italic;"></p>
-				</div>
-	        
 	        		<ul id="matchesList" class="ui-listview">
-					<li style="display: none; visibility: hidden;"></li>
 	         	</ul>
 	         	
 			</div>
 
 			<footer id="footer" class="ui-footer ui-bottom-button">
-			
-				<a id="btnAction" class="ui-btn" onclick="getDataOrExit(this);"></a>
-
+				<a id="btnAction" class="ui-btn" onclick="getData();"></a>
 			</footer>
 		</div>
 

@@ -39,21 +39,3 @@ li {
 	line-height: initial;
 	margin: 0;
 }
-
-div img {
-	text-align: center;
-	align: center;
-}
-
-#empty {
-	text-align: center;
-	font-style: italic;
-}
-
-#emptyContainer {
-	position: absolute;
-	top: 10%;
-	left: 10%;
-	text-align: center;
-	margin: 0 auto;
-}

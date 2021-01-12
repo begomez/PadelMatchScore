@@ -7,9 +7,7 @@ var OFFSET = 10;
 var ID_TITLE = "mainTitle";
 var ID_SUBTITLE = "secondaryTitle";
 
-var ID_CONTAINER = "emptyContainer";
 var ID_OPTIONS = "listContent";
-var ID_EMPTY = "empty";
 
 function retrieveData() {
 	fetchFromDB();
@@ -22,29 +20,16 @@ function fetchFromDB() {
 		db,
 		PAGE,
 		PAGE * OFFSET, 
-		function(result) {
-			showHeader();
-			hideEmptyList();
-			
+		function(result) {			
 			writeSumariesInStorage(result);
 			
-			dumpData(result)
-
+			dumpData(result);
 		},
-		function() {
-			hideHeader();
-			hideOptions();
+		function() {						
+			toEmpty();
 		}
 	);
 }
-
-function hideEmptyList() {
-	hideHTMLWidget(ID_CONTAINER);
-}
-
-function hideOptions() {
-	hideHTMLWidget(ID_OPTIONS);	
-} 
 
 function dumpData(result) {
 	for (var i = 0; i < result.length; i++) {
