@@ -74,11 +74,15 @@
 		    		tau,
 		    		"tutorial", 
 		    		function() {
-		    			++page;
+		    			if (page < MAX_PAGES) {
+			    			++page;
+		    			}
 					configPage(page);
 		    		},
 		    		function() {		
-		    			--page;
+		    			if (page > 0) {
+			    			--page;		    			
+		    			}
 					configPage(page);
 		    		},
 		    		500

@@ -6,15 +6,18 @@ var IMG_STEP_1 = "tut_step_1.png";
 var IMG_STEP_2 = "tut_step_2.png";
 var IMG_STEP_3 = "tut_step_3.png";
 var IMG_STEP_4 = "tut_step_4.png";
+var IMG_STEP_5 = "tut_step_5.png";
 
 var ID_IMG = "imgTutorial";
 var ID_MSG = "msgTutorial";
 var ID_BTN = "btnAction";
 
+var MAX_PAGES = 5;
 var FIRST_PAGE = 1;
 var SECOND_PAGE = 2;
 var THIRD_PAGE = 3;
 var FOURTH_PAGE = 4;
+var FIFTH_PAGE = 5;
 
 var page = 1;
 
@@ -46,8 +49,13 @@ function configPage(page) {
 			break;
 		case FOURTH_PAGE:
 			window.document.getElementById(ID_MSG).innerHTML = LANG_JSON_DATA["tutorial_step4"];
-			window.document.getElementById(ID_BTN).innerHTML = LANG_JSON_DATA["action_done"];
 			loadImage(ID_IMG, "../images/"+ IMG_STEP_4);
+			hideFooter();
+			break;
+		case FIFTH_PAGE:
+			window.document.getElementById(ID_MSG).innerHTML = LANG_JSON_DATA["tutorial_step5"];
+			window.document.getElementById(ID_BTN).innerHTML = LANG_JSON_DATA["action_done"];
+			loadImage(ID_IMG, "../images/"+ IMG_STEP_5);
 			showFooter();
 			break;
 		default:

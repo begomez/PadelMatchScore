@@ -34,8 +34,13 @@ li {
 	color: red;
 	font-style: bold;
 	font-size: 0.75em;
-	padding-left: var(--item_pad_left_big);
 
 	line-height: initial;
 	margin: 0;
+}
+
+ul {
+	position: absolute;
+	left: 20%;
+	top: 10%;
 }
