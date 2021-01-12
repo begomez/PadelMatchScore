@@ -19,6 +19,9 @@
 
 	<body onload="initPage();">
 		<div class="ui-page grad" id="tutorial">
+		
+		   <div id="pageIndicator" class="ui-page-indicator"></div>
+		
 
 			<div id="content" class="ui-content">
 
@@ -64,12 +67,9 @@
 
 				configPage(page);
 			}
-
-			function onContinueClick() {
-				page++;
-				configPage(page);
-			}
-						
+			
+			var DELAY = 500;
+			
 		    initBezel(
 		    		tau,
 		    		"tutorial", 
@@ -85,9 +85,9 @@
 		    			}
 					configPage(page);
 		    		},
-		    		500
+		    		DELAY
 	    		);
-
+	    		
 		</script>
 
 	</body>

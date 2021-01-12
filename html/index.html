@@ -94,13 +94,13 @@
 		    			var index = 0;
 					var snapList = document.getElementById("listContent");
 					if (snapList !== null) {
-						var snapListComponent = tau.widget.SnapListview(snapList);
-						if (snapListComponent !== null) {
-							var selectedIndex = snapListComponent.getSelectedIndex();
+						var tauSnapList = tau.widget.SnapListview(snapList);
+						if (tauSnapList !== null) {
+							var selectedIndex = tauSnapList.getSelectedIndex();
 					    		if (selectedIndex !== null) {
 					    			index = selectedIndex;
 					    		}   
-					    		snapListComponent.scrollToPosition(++index);
+					    		tauSnapList.scrollToPosition(++index);
 						}
 					}
 		    		},
@@ -108,13 +108,13 @@
 		    			var index = 0;
 					var snapList = document.getElementById("listContent");
 					if (snapList !== null) {
-						var snapListComponent = tau.widget.SnapListview(snapList);
-						if (snapListComponent !== null) {
-							var selectedIndex = snapListComponent.getSelectedIndex();			    		
+						var tauSnapList = tau.widget.SnapListview(snapList);
+						if (tauSnapList !== null) {
+							var selectedIndex = tauSnapList.getSelectedIndex();			    		
 							if (selectedIndex !== null) {
 					    			index = selectedIndex;
 					    		}   
-					    		snapListComponent.scrollToPosition(--index);
+					    		tauSnapList.scrollToPosition(--index);
 						}
 					}
 		    		},
