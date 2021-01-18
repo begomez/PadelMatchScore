@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns:tizen="http://tizen.org/ns/widgets" xmlns="http://www.w3.org/ns/widgets" id="http://yourdomain/PadelMatchScore" version="1.0.0" viewmodes="maximized">
-    <tizen:application id="xkSOeWmNgt.PadelMatchScore" package="xkSOeWmNgt" required_version="2.4"/>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="http://yourdomain/PadelMatchScore" version="1.0.0" viewmodes="maximized">
+    <tizen:application id="xkSOeWmNgt.PadelMatchScore" package="xkSOeWmNgt" required_version="2.3.2"/>
     <author href="https://applicationnotresponding.wordpress.com/" email="bernat.gomez.apps@gmail.com">Bernat Gomez</author>
     <content src="html/splash.html"/>
     <feature name="http://tizen.org/feature/screen.size.normal"/>
@@ -10,5 +10,5 @@
     <tizen:privilege name="http://tizen.org/privilege/filesystem.read"/>
     <tizen:privilege name="http://tizen.org/privilege/application.launch"/>
     <tizen:profile name="wearable"/>
-    <tizen:setting hwkey-event="enable"/>
+    <tizen:setting background-support="disable" encryption="disable" hwkey-event="enable"/>
 </widget>
