@@ -6,7 +6,7 @@
     --partial_height: 100%;
     
     --layer_score_height: 40%;
-    --layer_separator_height: 15%; 
+    --layer_separator_height: 18%; 
 }
 
 @font-face {
@@ -95,21 +95,25 @@ td.separator {
 td.first {
   width: 30%;
   color: red;
+  vertical-align: center;
 }
 
 td.second {
   width: 22%;
   color: white;
+  vertical-align: center;
 }
 
 td.third {
   width: 22%;
   color: white;
+  vertical-align: center;
 }
 
 td.fourth {
   width: 22%;
   color: white;
+  vertical-align: center;
 }
 
 h3 {
