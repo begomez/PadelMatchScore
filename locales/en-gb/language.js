@@ -1,6 +1,41 @@
 /* Localized strings contents for English [United Kingdom] */ 
 
-TIZEN_L10N=
+LANG_JSON_DATA =
 {
-	"app_name" : "PadelScore"
+		"app_name" : "PadelScore",
+		"option_start" : "Play",
+		"option_finish" : "Finish game",
+		"option_discard" : "Discard game",
+		"option_history" : "Last results",
+		"option_stats" : "Statistics",
+		"option_stats_static" : "Profile",
+		"option_stats_bar" : "Summary",
+		"option_tutorial" : "HowTo",
+		"action_done" : "Done",
+		"action_skip" : "Exit",
+		"action_save" : "Save match",
+		"action_discard" : "Discard match",
+		"action_continue" : "Next tip",
+		"action_finish" : "Finish match",
+		"action_more" : "More data",
+		"str_current" : "Current match:",
+		"str_game" : "GAME",
+		"str_set1" : "SET1",
+		"str_set2" : "SET2",
+		"str_set3" : "SET3",
+		"error_no_match" : "No current match found!",
+		"error_no_data" : "No matches found!",
+		"discard_success" : "Match discarded!",
+		"finish_success" : "Match saved!",
+		"tutorial_step1" : "Use bezel to scroll through contents and lists",
+		"tutorial_step2" : "When playing, use bezel to save/discard current match",
+		"tutorial_step3" : "Swipe horizontally to change the\npoints score",
+		"tutorial_step4" : "Swipe vertically to update\ngames for a given set",
+		"tutorial_step5" : "Check match results and review your statistics!",
+		"confirm_save" : "Save\ncurrent match\nand finish?",
+		"confirm_discard" : "Discard\ncurrent match?",
+		"stats_x" : "Matches",
+		"stats_y" : "Sets",
+		"stats_local" : "Local",
+		"stats_visitor" : "Visitor"
 };
